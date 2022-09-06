@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite-OpenGame">
+	<parameter name="url" value="https://pr3l1v3.com"></parameter>
+	<parameter name="platformName" value="Windows WEB"></parameter>
+	<parameter name="browserName" value="Chrome"></parameter>
+	<parameter name="javaVersion" value="JDK/JRE 17"></parameter>
+	<parameter name="automationAuthor" value="Jordan"></parameter>
+	<parameter name="userIDFE" value="qctester001"></parameter>
+	<parameter name="vendor" value="MG"></parameter>
+	<test thread-count="5" name="OpenGame">
+		<groups>
+			<run>
+				<!-- <exclude name="login"></exclude> -->
+			</run>
+		</groups>
+		<classes>
+			<class name="openGame.OpenGameTest"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
