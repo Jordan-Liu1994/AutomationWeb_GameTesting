@@ -3,15 +3,16 @@
 <suite name="Failed suite [Suite-OpenGame]" guice-stage="DEVELOPMENT">
   <parameter name="automationAuthor" value="Jordan"/>
   <parameter name="javaVersion" value="JDK/JRE 17"/>
+  <parameter name="vendor" value="AG"/>
   <parameter name="browserName" value="Chrome"/>
   <parameter name="platformName" value="Windows WEB"/>
-  <parameter name="userIDFE" value="qctester001"/>
+  <parameter name="userIDFE" value="qctestergame001"/>
   <parameter name="url" value="https://pr3l1v3.com"/>
   <test thread-count="5" name="OpenGame(failed)">
     <classes>
       <class name="openGame.OpenGameTest">
         <methods>
-          <include name="slotsGame"/>
+          <include name="slotsGame" invocation-numbers="0"/>
           <include name="logCaseStatus"/>
           <include name="startReportAndSetProperty"/>
           <include name="stopDriver"/>

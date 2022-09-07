@@ -14,6 +14,7 @@ import functionsFE.LoginFE;
 import functionsFE.LogoutFE;
 import functionsFE.SelectSlotsGame;
 import utilities.CreateReport;
+import utilities.ResultListener;
 import utilities.TakeScreenShot;
 import utilities.VariablesStore;
 
@@ -21,6 +22,8 @@ public class OpenGameTest extends VariablesStore {
 
 	TakeScreenShot takeSS = new TakeScreenShot();
 	CreateReport cR = new CreateReport();
+	ResultListener rL = new ResultListener();
+	
 	Announcement aF = new Announcement();
 	LoginFE lFE = new LoginFE();
 	LogoutFE lOFE = new LogoutFE();
@@ -71,39 +74,37 @@ public class OpenGameTest extends VariablesStore {
 			sSG.selectVendorAG();
 		} else if (vendor.equalsIgnoreCase("BBIN")) {
 			sSG.selectVendorBBIN();
-		}else if (vendor.equalsIgnoreCase("HC")) {
+		} else if (vendor.equalsIgnoreCase("HC")) {
 			sSG.selectVendorHC();
-		}else if (vendor.equalsIgnoreCase("PTTCG")) {
+		} else if (vendor.equalsIgnoreCase("PTTCG")) {
 			sSG.selectVendorPTTCG();
-		}else if (vendor.equalsIgnoreCase("PP")) {
+		} else if (vendor.equalsIgnoreCase("PP")) {
 			sSG.selectVendorPP();
-		}else if (vendor.equalsIgnoreCase("MG")) {
+		} else if (vendor.equalsIgnoreCase("MG")) {
 			sSG.selectVendorMG();
-		}else if (vendor.equalsIgnoreCase("CQ9")) {
+		} else if (vendor.equalsIgnoreCase("CQ9")) {
 			sSG.selectVendorCQ9();
-		}else if (vendor.equalsIgnoreCase("JDB")) {
+		} else if (vendor.equalsIgnoreCase("JDB")) {
 			sSG.selectVendorJDB();
 		}
 	}
 
+	@Test(priority = 4, groups = { "slotsGame" })
+	@Parameters({ "gameName" })
+	public void selectGame(String gameName) throws FailedLoginException, InterruptedException {
+		cR.createTest("selectGame");
+		sSG.selectAllGamesOption();
+		sSG.selectGameInVendor(gameName);
+	}
+
 	@AfterMethod
 	public void logCaseStatus(ITestResult result) {
-		String resultOfCaseStatus = result.getName();
-		if (result.getStatus() == ITestResult.SUCCESS) {
-			cR.getExtentTest().pass(step + resultOfCaseStatus + " is passed!");
-		}
-		if (result.getStatus() == ITestResult.SKIP) {
-			cR.getExtentTest().skip(step + resultOfCaseStatus + " is skipped!");
-		} else if (result.getStatus() == ITestResult.FAILURE) {
-			takeSS.getFailScreenShot(resultOfCaseStatus);
-			cR.getExtentTest().fail(step + resultOfCaseStatus + " is failed!");
-			cR.getExtentTest().addScreenCaptureFromPath(takeSS.screenShotPathExtent() + resultOfCaseStatus + failSS, resultOfCaseStatus);
-		}
+		rL.logCaseStatus(result);
 	}
 
 	@AfterClass
 	public void stopDriver() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		cR.flushTest();
 		bDriver.stopDriver();
 	}

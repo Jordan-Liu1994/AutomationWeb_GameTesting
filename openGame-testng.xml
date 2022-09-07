@@ -6,8 +6,9 @@
 	<parameter name="browserName" value="Chrome"></parameter>
 	<parameter name="javaVersion" value="JDK/JRE 17"></parameter>
 	<parameter name="automationAuthor" value="Jordan"></parameter>
-	<parameter name="userIDFE" value="qctester001"></parameter>
-	<parameter name="vendor" value="MG"></parameter>
+	<parameter name="userIDFE" value="qctestergame001"></parameter>
+	<parameter name="vendor" value="AG"></parameter>
+	<parameter name="gameName" value="Chinese New Year"></parameter>
 	<test thread-count="5" name="OpenGame">
 		<groups>
 			<run>

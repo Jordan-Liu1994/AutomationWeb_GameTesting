@@ -31,6 +31,7 @@ public class Announcement extends VariablesStore {
 					noShowAgainTodayButton.click();
 					cR.getExtentTest().info("Clicked " + buttonText);
 
+					Thread.sleep(250);
 					closeAnnouncementButton = bDriver.getDriver().findElement(By.xpath("//div[@class='modal fade web_announcement_image_popout show']//button[@aria-label='Close']"));
 					wait.until(ExpectedConditions.visibilityOf(noShowAgainTodayButton));
 					wait.until(ExpectedConditions.elementToBeClickable(closeAnnouncementButton));
@@ -46,9 +47,8 @@ public class Announcement extends VariablesStore {
 	}
 
 	public void closeAnnouncementOverview() throws FailedLoginException, InterruptedException {
-		WebDriverWait wait = new WebDriverWait(bDriver.getDriver(), 15);
-
 		try {
+			wait = new WebDriverWait(bDriver.getDriver(), 15);
 			noShowAgainTodayButton = bDriver.getDriver().findElement(By.xpath("//label[@for='normal_announcement_radio']//div[@class='checkbox']//div//span"));
 			Thread.sleep(250);
 			wait.until(ExpectedConditions.visibilityOf(noShowAgainTodayButton));
@@ -58,6 +58,7 @@ public class Announcement extends VariablesStore {
 				noShowAgainTodayButton.click();
 				cR.getExtentTest().info("Clicked " + buttonText);
 
+				Thread.sleep(250);
 				closeAnnouncementButton = bDriver.getDriver().findElement(By.xpath("//div[@class='modal fade large wna_style show']//button[@aria-label='Close']"));
 				wait.until(ExpectedConditions.visibilityOf(noShowAgainTodayButton));
 				wait.until(ExpectedConditions.elementToBeClickable(closeAnnouncementButton));

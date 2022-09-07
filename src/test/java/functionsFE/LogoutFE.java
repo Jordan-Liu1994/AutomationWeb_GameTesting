@@ -35,7 +35,6 @@ public class LogoutFE extends VariablesStore {
 		wait.until(ExpectedConditions.elementToBeClickable(logoutButton));
 		wait.until(ExpectedConditions.visibilityOf(logoutButton));
 		String logoutButtonText = logoutButton.getText();
-
 		Thread.sleep(250);
 		if (logoutButton.isEnabled()) {
 			logoutButton.click();
@@ -47,11 +46,11 @@ public class LogoutFE extends VariablesStore {
 	}
 
 	public void verifyLogout() throws FailedLoginException, InterruptedException {
-		wait = new WebDriverWait(bDriver.getDriver(), 10);
+		fail = "verifyLogout failed";
+
+		wait = new WebDriverWait(bDriver.getDriver(), 15);
 		WebElement loginOptionButton = bDriver.getDriver().findElement(By.id("header_login"));
 		wait.until(ExpectedConditions.visibilityOf(loginOptionButton));
-		String fail = "verifyLogout failed";
-
 		if (loginOptionButton.isDisplayed()) {
 			cR.getExtentTest().info("Logout success");
 		} else {
