@@ -15,23 +15,23 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.CreateReport;
 import utilities.VariablesStore;
 
-public class SelectSlotsGame extends VariablesStore {
+public class SelectPokerGame extends VariablesStore {
 
 	CreateReport cR = new CreateReport();
 
 	WebDriverWait wait;
 	String fail;
 
-	public void selectSlots() throws FailedLoginException {
-		fail = "selectSlots failed";
+	public void selectPoker() throws FailedLoginException {
+		fail = "selectPoker failed";
 
 		wait = new WebDriverWait(bDriver.getDriver(), 15);
-		WebElement selectSlots = bDriver.getDriver().findElement(By.xpath("(//div[@class='header_menu_item'])[2]"));
-		wait.until(ExpectedConditions.elementToBeClickable(selectSlots));
-		String selectSlotsText = selectSlots.getText();
+		WebElement selectPoker = bDriver.getDriver().findElement(By.xpath("(//div[@class='header_menu_item'])[3]"));
+		wait.until(ExpectedConditions.elementToBeClickable(selectPoker));
+		String selectSlotsText = selectPoker.getText();
 
-		if (selectSlots.isDisplayed()) {
-			selectSlots.click();
+		if (selectPoker.isDisplayed()) {
+			selectPoker.click();
 			cR.getExtentTest().info("Clicked " + selectSlotsText);
 		} else {
 			cR.getExtentTest().fail(fail);
@@ -39,35 +39,21 @@ public class SelectSlotsGame extends VariablesStore {
 		}
 	}
 
-	public void selectMainVendor() throws FailedLoginException, InterruptedException {
-		fail = "selectMainVendor failed";
+	public void selectVendor(String vendorName) throws FailedLoginException, InterruptedException {
+		fail = "selectVendor failed";
 
 		wait = new WebDriverWait(bDriver.getDriver(), 15);
-		WebElement selectMainVendor = bDriver.getDriver().findElement(By.xpath("//div[@class='content_block active']"));
-		wait.until(ExpectedConditions.visibilityOf(selectMainVendor));
-		String selectMainVendorText = selectMainVendor.getText();
+		WebElement selectVendor = bDriver.getDriver().findElement(By.xpath("//div[@class='more_game_item']//div//div[contains(text(),'" + vendorName + "')]"));
+		wait.until(ExpectedConditions.visibilityOf(selectVendor));
+		wait.until(ExpectedConditions.elementToBeClickable(selectVendor));
+		String selectVendorText = selectVendor.getText();
 
-		if (selectMainVendor.isEnabled()) {
-			cR.getExtentTest().info(selectMainVendorText + " already selected");
-			Thread.sleep(500);
-		} else if (!selectMainVendor.isEnabled()) {
-			selectMainVendor.click();
-			cR.getExtentTest().info("Clicked " + selectMainVendorText);
+		if (selectVendor.isDisplayed()) {
+			selectVendor.click();
+			cR.getExtentTest().info("Clicked " + selectVendorText);
+			Thread.sleep(1500);
 		} else {
 			cR.getExtentTest().fail(fail);
-		}
-	}
-
-	public void selectOtherVendor(String vendorName) throws FailedLoginException, InterruptedException {
-		fail = "selectOtherVendor failed";
-
-		wait = new WebDriverWait(bDriver.getDriver(), 15);
-		WebElement selectOtherVendor = bDriver.getDriver().findElement(By.xpath("//div[normalize-space()='" + vendorName + "']//span"));
-
-		if (!selectOtherVendor.isSelected()) {
-			selectOtherVendor.click();
-			cR.getExtentTest().info("Clicked " + vendorName);
-			Thread.sleep(500);
 		}
 	}
 
@@ -77,7 +63,7 @@ public class SelectSlotsGame extends VariablesStore {
 	public void selectGameInVendor(String gameName) throws FailedLoginException, InterruptedException {
 		fail = "selectGameInVendor failed";
 
-		WebElement selectGameInVendor = bDriver.getDriver().findElement(By.xpath("//div[contains(text(),'" + gameName + "')]"));
+		WebElement selectGameInVendor = bDriver.getDriver().findElement(By.xpath("//div[normalize-space()='" + gameName + "']"));
 		Actions builder = new Actions(bDriver.getDriver());
 		Action act = builder.moveToElement(selectGameInVendor).build();
 		act.perform();

@@ -7,16 +7,109 @@
 	<parameter name="javaVersion" value="JDK/JRE 17"></parameter>
 	<parameter name="automationAuthor" value="Jordan"></parameter>
 	<parameter name="userIDFE" value="qctestergame001"></parameter>
-	<parameter name="vendor" value="AG"></parameter>
-	<parameter name="gameName" value="Chinese New Year"></parameter>
+
+	<!-- to select other game vendors and game name in vendor list, edit the values in the 2 parameters below -->
+	<parameter name="vendorSlotsMain" value="no"></parameter>
+	<parameter name="gameNameSlotsMain" value="Kung Fu All Stars"></parameter>
+
+	<!-- <parameter name="vendorSlots" value="BBIN SLOTS INR"></parameter>
+	<parameter name="gameNameSlots" value="Staronic"></parameter>-->
+
+	<parameter name="vendorSlots" value="HC SLOTS INR"></parameter>
+	<parameter name="gameNameSlots" value="King of Fighters"></parameter>
+
+	<!-- <parameter name="vendorSlots" value="PTTCG SLOTS INR"></parameter>
+	<parameter name="gameNameSlots" value="Fortune Lions"></parameter>
+
+	<parameter name="vendorSlots" value="PP SLOTS INR"></parameter>
+	<parameter name="gameNameSlots" value="Hot to Burn"></parameter>
+	
+	<parameter name="vendorSlots" value="MG SLOTS INR"></parameter>
+	<parameter name="gameNameSlots" value="Kings of Crystals"></parameter>
+	
+	<parameter name="vendorSlots" value="CQ9 SLOTS INR"></parameter>
+	<parameter name="gameNameSlots" value="Jump High 2"></parameter>
+	
+	<parameter name="vendorSlots" value="JDB SLOTS INR"></parameter>
+	<parameter name="gameNameSlots" value="Winning Mask"></parameter>-->
+
+	<!-- to select other game vendors and game name in vendor list, edit the values in the 2 parameters below -->
+	<parameter name="vendorPokerMaster" value="FG"></parameter>
+	
+	<parameter name="vendorPokerFG" value="FG POKER INR"></parameter>
+	<parameter name="gameNamePokerFG" value="Baccarat"></parameter>
+
+	<!-- to select other game vendors and game name in vendor list, edit the values in the 2 parameters below -->
+	<parameter name="vendorSportsMaster" value="IM"></parameter>
+
+	<parameter name="vendorSportsOBG" value="OBGSPORTSBOOK INR"></parameter>
+
+	<parameter name="vendorSportsIM" value="IM SPORT INR"></parameter>
+
+	<parameter name="vendorSportsIBC" value="IBC SPORT INR"></parameter>
+
+	<parameter name="vendorSportsUG" value="UG SPORT INR"></parameter>
+
+	<!-- to select other game vendors and game name in vendor list, edit the values in the 2 parameters below -->
+	<parameter name="vendorLiveCasinoMaster" value="dg"></parameter>
+
+	<parameter name="vendorLiveCasinoAG" value="AG CASINO INR"></parameter>
+
+	<parameter name="vendorLiveCasinoBG" value="BG CASINO INR"></parameter>
+
+	<parameter name="vendorLiveCasinoBBIN" value="BBIN CASINO INR"></parameter>
+
+	<parameter name="vendorLiveCasinoDG" value="DG CASINO INR"></parameter>
+
+	<parameter name="vendorLiveCasinoAllbet" value="Allbet CASINO INR"></parameter>
+
+	<parameter name="vendorLiveCasinoEBET" value="EBET CASINO INR"></parameter>
+
+	<!-- to select other game vendors and game name in vendor list, edit the values in the 2 parameters below -->
+	<parameter name="vendorFishMaster" value="FG"></parameter>
+
+	<!-- <parameter name="vendorFishBBIN" value="BBIN FISH INR"></parameter> -->
+	<parameter name="gameNameFishBBIN" value="Rich Ocean"></parameter>
+
+	<parameter name="vendorFishPP" value="PP FISH INR"></parameter>
+	<parameter name="gameNameFishPP" value="Fortune Fishing"></parameter>
+
+	<parameter name="vendorFishMainJDB" value="JDB FISH INR"></parameter>
+	<parameter name="gameNameFishJDB" value="Cai Shen Fishing"></parameter>
+
+	<parameter name="vendorFishMainMT" value="MT FISH INR"></parameter>
+	<parameter name="gameNameFishMT" value="Crazy Fishing"></parameter>
+
+	<parameter name="vendorFishMainFG" value="FG FISH INR"></parameter>
+	<parameter name="gameNameFishFG" value="Daily Fishing"></parameter>
+
+	<!-- to select other game vendors and game name in vendor list, edit the values in the 2 parameters below -->
+	<parameter name="vendorESportsMaster" value="IBC"></parameter>
+
+	<parameter name="vendorESportsIM" value="IM ESPORTS INR"></parameter>
+
+	<parameter name="vendorESportsIBC" value="IBC ESPORTS INR"></parameter>
+
+	<parameter name="vendorESportsIA" value="IA ESPORTS INR"></parameter>
+
 	<test thread-count="5" name="OpenGame">
 		<groups>
 			<run>
-				<!-- <exclude name="login"></exclude> -->
+				<exclude name="slots"></exclude>
+				<!-- <exclude name="poker"></exclude> -->
+				<exclude name="sports"></exclude>
+				<exclude name="liveCasino"></exclude>
+				<exclude name="eSports"></exclude>
+				<exclude name="fish"></exclude>
 			</run>
 		</groups>
 		<classes>
-			<class name="openGame.OpenGameTest"></class>
+			<class name="openGame.OpenSlotsGameTest"></class>
+			<class name="openGame.OpenPokerGameTest"></class>
+			<class name="openGame.OpenSportsGameTest"></class>
+			<class name="openGame.OpenLiveCasinoGameTest"></class>
+			<class name="openGame.OpenESportsGameTest"></class>
+			<class name="openGame.OpenFishGameTest"></class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

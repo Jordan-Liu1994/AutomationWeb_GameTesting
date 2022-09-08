@@ -15,24 +15,24 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.CreateReport;
 import utilities.VariablesStore;
 
-public class SelectSlotsGame extends VariablesStore {
+public class SelectFishGame extends VariablesStore {
 
 	CreateReport cR = new CreateReport();
 
 	WebDriverWait wait;
 	String fail;
 
-	public void selectSlots() throws FailedLoginException {
-		fail = "selectSlots failed";
+	public void selectFish() throws FailedLoginException {
+		fail = "selectFish failed";
 
 		wait = new WebDriverWait(bDriver.getDriver(), 15);
-		WebElement selectSlots = bDriver.getDriver().findElement(By.xpath("(//div[@class='header_menu_item'])[2]"));
-		wait.until(ExpectedConditions.elementToBeClickable(selectSlots));
-		String selectSlotsText = selectSlots.getText();
+		WebElement selectFish = bDriver.getDriver().findElement(By.xpath("(//div[@class='header_menu_item'])[6]"));
+		wait.until(ExpectedConditions.elementToBeClickable(selectFish));
+		String selectFishText = selectFish.getText();
 
-		if (selectSlots.isDisplayed()) {
-			selectSlots.click();
-			cR.getExtentTest().info("Clicked " + selectSlotsText);
+		if (selectFish.isDisplayed()) {
+			selectFish.click();
+			cR.getExtentTest().info("Clicked " + selectFishText);
 		} else {
 			cR.getExtentTest().fail(fail);
 			throw new FailedLoginException(fail);

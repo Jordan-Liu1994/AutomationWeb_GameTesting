@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="openGame.OpenGameTest">
+      <class name="openGame.OpenSlotsGameTest">
         <methods>
-          <include name="goToSite"/>
-          <include name="startReportAndSetProperty"/>
           <include name="stopDriver"/>
+          <include name="logCaseStatus"/>
+          <include name="startReportAndSetProperty"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- openGame.OpenGameTest -->
+      </class> <!-- openGame.OpenSlotsGameTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

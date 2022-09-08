@@ -12,26 +12,26 @@ import org.testng.annotations.Test;
 import functionsFE.Announcement;
 import functionsFE.LoginFE;
 import functionsFE.LogoutFE;
-import functionsFE.SelectSlotsGame;
+import functionsFE.SelectSportsGame;
 import utilities.CreateReport;
 import utilities.ResultListener;
 import utilities.TakeScreenShot;
 import utilities.VariablesStore;
 
-public class OpenGameTest extends VariablesStore {
+public class OpenSportsGameTest extends VariablesStore {
 
 	TakeScreenShot takeSS = new TakeScreenShot();
 	CreateReport cR = new CreateReport();
 	ResultListener rL = new ResultListener();
-	
+
 	Announcement aF = new Announcement();
 	LoginFE lFE = new LoginFE();
 	LogoutFE lOFE = new LogoutFE();
-	SelectSlotsGame sSG = new SelectSlotsGame();
+	SelectSportsGame sSG = new SelectSportsGame();
 
-	private static String nameOfReport = "OpenGameTest";
+	private static String nameOfReport = "OpenPokerGameTest";
 
-	@BeforeClass(groups = { "Start" })
+	@BeforeClass(groups = { "Start", "sports" })
 	@Parameters({ "platformName", "browserName", "javaVersion", "automationAuthor" })
 	public void startReportAndSetProperty(String platformName, String browserName, String javaVersion, String automationAuthor) {
 		bDriver.setChromeDriverProperty(driverTypeChrome, driverPathChrome);
@@ -39,21 +39,21 @@ public class OpenGameTest extends VariablesStore {
 		cR.generateReport(nameOfReport, platformName, browserName, javaVersion, automationAuthor);
 	}
 
-	@Test(priority = 0, groups = { "goToSite" })
+	@Test(priority = 0, groups = { "goToSite", "sports" })
 	@Parameters({ "url" })
 	public void goToSite(String url) {
 		cR.createTest("goToSite");
 		bDriver.getURL(url);
 	}
 
-	@Test(priority = 1, groups = { "announcement" })
+	@Test(priority = 1, groups = { "announcement", "sports" })
 	public void announcement() throws FailedLoginException, InterruptedException {
 		cR.createTest("announcement");
 		aF.closeAnnouncement();
 		aF.closeAnnouncementOverview();
 	}
 
-	@Test(priority = 2, groups = { "login" })
+	@Test(priority = 2, groups = { "login", "sports" })
 	@Parameters({ "userIDFE" })
 	public void login(String userIDFE) throws FailedLoginException, InterruptedException {
 		cR.createTest("login");
@@ -65,47 +65,38 @@ public class OpenGameTest extends VariablesStore {
 		lFE.verifyLogIn(userIDFE);
 	}
 
-	@Test(priority = 3, groups = { "slotsGame" })
-	@Parameters({ "vendor" })
-	public void slotsGame(String vendor) throws FailedLoginException, InterruptedException {
-		cR.createTest("slotsGame");
-		sSG.selectSlots();
-		if (vendor.equalsIgnoreCase("AG")) {
-			sSG.selectVendorAG();
-		} else if (vendor.equalsIgnoreCase("BBIN")) {
-			sSG.selectVendorBBIN();
-		} else if (vendor.equalsIgnoreCase("HC")) {
-			sSG.selectVendorHC();
-		} else if (vendor.equalsIgnoreCase("PTTCG")) {
-			sSG.selectVendorPTTCG();
-		} else if (vendor.equalsIgnoreCase("PP")) {
-			sSG.selectVendorPP();
-		} else if (vendor.equalsIgnoreCase("MG")) {
-			sSG.selectVendorMG();
-		} else if (vendor.equalsIgnoreCase("CQ9")) {
-			sSG.selectVendorCQ9();
-		} else if (vendor.equalsIgnoreCase("JDB")) {
-			sSG.selectVendorJDB();
+	@Test(priority = 3, groups = { "sportsGame", "sports" })
+	@Parameters({ "vendorSportsMaster", "vendorSportsOBG", "vendorSportsIM", "vendorSportsIBC", "vendorSportsUG" })
+	public void sportsGame(String vendorSportsMaster, String vendorSportsOBG, String vendorSportsIM, String vendorSportsIBC, String vendorSportsUG) throws FailedLoginException, InterruptedException {
+		cR.createTest("sportsGame");
+		sSG.selectSports();
+		if (vendorSportsMaster.equalsIgnoreCase("OBG")) {
+			sSG.selectVendor(vendorSportsOBG);
+		} else if (vendorSportsMaster.equalsIgnoreCase("IM")) {
+			sSG.selectVendor(vendorSportsIM);
+		} else if (vendorSportsMaster.equalsIgnoreCase("IBC")) {
+			sSG.selectVendor(vendorSportsIBC);
+		} else if (vendorSportsMaster.equalsIgnoreCase("UG")) {
+			sSG.selectVendor(vendorSportsUG);
 		}
 	}
 
-	@Test(priority = 4, groups = { "slotsGame" })
-	@Parameters({ "gameName" })
-	public void selectGame(String gameName) throws FailedLoginException, InterruptedException {
-		cR.createTest("selectGame");
-		sSG.selectAllGamesOption();
-		sSG.selectGameInVendor(gameName);
+	@Test(priority = 4, groups = { "selectGameSports", "sports" })
+	public void selectGameSports() throws FailedLoginException, InterruptedException {
+		cR.createTest("selectGameSports");
+		sSG.selectGameInVendor();
+		Thread.sleep(1500);
 	}
 
-	@AfterMethod
+	@AfterMethod(groups = { "sports" })
 	public void logCaseStatus(ITestResult result) {
 		rL.logCaseStatus(result);
 	}
 
-	@AfterClass
+	@AfterClass(groups = { "sports" })
 	public void stopDriver() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(1500);
 		cR.flushTest();
-		bDriver.stopDriver();
+//		bDriver.stopDriver();
 	}
 }
