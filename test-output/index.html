@@ -104,27 +104,27 @@
                     <div class="method-list-content passed suite-Suite_OpenGame">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite_OpenGame" title="openGame.OpenPokerGameTest" class="method navigator-link" hash-for-method="announcement">announcement</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite_OpenGame" title="openGame.OpenESportsGameTest" class="method navigator-link" hash-for-method="announcement">announcement</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite_OpenGame" title="openGame.OpenPokerGameTest" class="method navigator-link" hash-for-method="goToSite(https://pr3l1v3.com)">goToSite(https://pr3l1v3.com)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite_OpenGame" title="openGame.OpenESportsGameTest" class="method navigator-link" hash-for-method="eSportsGame(IBC, IM ESPORTS INR, IBC ESPORTS INR, IA ESPORTS INR)">eSportsGame(IBC, IM ESPORTS INR, IBC ESPORTS INR, IA ESPORTS INR)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite_OpenGame" title="openGame.OpenPokerGameTest" class="method navigator-link" hash-for-method="login(qctestergame001)">login(qctestergame001)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite_OpenGame" title="openGame.OpenESportsGameTest" class="method navigator-link" hash-for-method="goToSite(https://pr3l1v3.com)">goToSite(https://pr3l1v3.com)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite_OpenGame" title="openGame.OpenPokerGameTest" class="method navigator-link" hash-for-method="pokerGame(FG, FG POKER INR)">pokerGame(FG, FG POKER INR)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite_OpenGame" title="openGame.OpenESportsGameTest" class="method navigator-link" hash-for-method="login(qctestergame001)">login(qctestergame001)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite_OpenGame" title="openGame.OpenPokerGameTest" class="method navigator-link" hash-for-method="selectGamePoker(FG, Baccarat)">selectGamePoker(FG, Baccarat)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite_OpenGame" title="openGame.OpenESportsGameTest" class="method navigator-link" hash-for-method="switchToGameESportsWindow">switchToGameESportsWindow</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite_OpenGame -->
@@ -142,7 +142,7 @@
           <div class="suite-Suite_OpenGame-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">openGame.OpenPokerGameTest</span>
+              <span class="class-name">openGame.OpenESportsGameTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -150,6 +150,14 @@
                   <a name="announcement">
                   </a> <!-- announcement -->
                   <span class="method-name">announcement</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="eSportsGame(IBC, IM ESPORTS INR, IBC ESPORTS INR, IA ESPORTS INR)">
+                  </a> <!-- eSportsGame(IBC, IM ESPORTS INR, IBC ESPORTS INR, IA ESPORTS INR) -->
+                  <span class="method-name">eSportsGame</span>
+                  <span class="parameters">(IBC, IM ESPORTS INR, IBC ESPORTS INR, IA ESPORTS INR)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -170,18 +178,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="pokerGame(FG, FG POKER INR)">
-                  </a> <!-- pokerGame(FG, FG POKER INR) -->
-                  <span class="method-name">pokerGame</span>
-                  <span class="parameters">(FG, FG POKER INR)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="selectGamePoker(FG, Baccarat)">
-                  </a> <!-- selectGamePoker(FG, Baccarat) -->
-                  <span class="method-name">selectGamePoker</span>
-                  <span class="parameters">(FG, Baccarat)</span>
+                  <a name="switchToGameESportsWindow">
+                  </a> <!-- switchToGameESportsWindow -->
+                  <span class="method-name">switchToGameESportsWindow</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -239,9 +238,9 @@
     &lt;groups&gt;
       &lt;run&gt;
         &lt;exclude name=&quot;slots&quot;/&gt;
+        &lt;exclude name=&quot;poker&quot;/&gt;
         &lt;exclude name=&quot;sports&quot;/&gt;
         &lt;exclude name=&quot;liveCasino&quot;/&gt;
-        &lt;exclude name=&quot;eSports&quot;/&gt;
         &lt;exclude name=&quot;fish&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
@@ -284,6 +283,38 @@
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
+              <span class="test-group-name">eSports</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">announcement</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">eSportsGame</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">goToSite</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">login</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">switchToGameESportsWindow</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">eSportsGame</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">eSportsGame</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
               <span class="test-group-name">goToSite</span>
               <br/>
               <div class="method-in-group">
@@ -300,42 +331,10 @@
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
-              <span class="test-group-name">poker</span>
+              <span class="test-group-name">switchToGameESportsWindow</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">announcement</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">goToSite</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">login</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">pokerGame</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">selectGamePoker</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">pokerGame</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">pokerGame</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">selectGamePoker</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">selectGamePoker</span>
+                <span class="method-in-group-name">switchToGameESportsWindow</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -357,30 +356,30 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'goToSite')
-data.setCell(0, 2, 'openGame.OpenPokerGameTest')
-data.setCell(0, 3, 17690);
+data.setCell(0, 1, 'switchToGameESportsWindow')
+data.setCell(0, 2, 'openGame.OpenESportsGameTest')
+data.setCell(0, 3, 11589);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'login')
-data.setCell(1, 2, 'openGame.OpenPokerGameTest')
-data.setCell(1, 3, 5305);
+data.setCell(1, 2, 'openGame.OpenESportsGameTest')
+data.setCell(1, 3, 5267);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'pokerGame')
-data.setCell(2, 2, 'openGame.OpenPokerGameTest')
-data.setCell(2, 3, 4267);
+data.setCell(2, 1, 'goToSite')
+data.setCell(2, 2, 'openGame.OpenESportsGameTest')
+data.setCell(2, 3, 3765);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'selectGamePoker')
-data.setCell(3, 2, 'openGame.OpenPokerGameTest')
-data.setCell(3, 3, 3753);
+data.setCell(3, 1, 'eSportsGame')
+data.setCell(3, 2, 'openGame.OpenESportsGameTest')
+data.setCell(3, 3, 1712);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'announcement')
-data.setCell(4, 2, 'openGame.OpenPokerGameTest')
-data.setCell(4, 3, 28);
+data.setCell(4, 2, 'openGame.OpenESportsGameTest')
+data.setCell(4, 3, 26);
 window.suiteTableData['Suite_OpenGame']= { tableData: data, tableDiv: 'times-div-Suite_OpenGame'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 31 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-Suite_OpenGame">
               </div> <!-- times-div-Suite_OpenGame -->
             </div> <!-- times-div -->
@@ -395,9 +394,24 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite_OpenGame" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">25 ignored methods</span>
+            <span class="header-content">26 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">openGame.OpenPokerGameTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">login</span>
+                <br/>
+                <span class="ignored-method-name">pokerGame</span>
+                <br/>
+                <span class="ignored-method-name">switchToPokerGameWindow</span>
+                <br/>
+                <span class="ignored-method-name">goToSite</span>
+                <br/>
+                <span class="ignored-method-name">announcement</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">openGame.OpenSlotsGameTest</span>
               <div class="ignored-methods-div">
@@ -418,6 +432,8 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">goToSite</span>
                 <br/>
+                <span class="ignored-method-name">switchToFishWindow</span>
+                <br/>
                 <span class="ignored-method-name">announcement</span>
                 <br/>
                 <span class="ignored-method-name">login</span>
@@ -431,39 +447,24 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">openGame.OpenLiveCasinoGameTest</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">switchToLiveCasinoWindow</span>
+                <br/>
                 <span class="ignored-method-name">login</span>
                 <br/>
                 <span class="ignored-method-name">liveCasinoGame</span>
                 <br/>
-                <span class="ignored-method-name">selectGameLiveCasino</span>
-                <br/>
                 <span class="ignored-method-name">goToSite</span>
                 <br/>
                 <span class="ignored-method-name">announcement</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">openGame.OpenESportsGameTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">goToSite</span>
-                <br/>
-                <span class="ignored-method-name">announcement</span>
-                <br/>
-                <span class="ignored-method-name">login</span>
-                <br/>
-                <span class="ignored-method-name">eSportsGame</span>
-                <br/>
-                <span class="ignored-method-name">selectGameESports</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">openGame.OpenSportsGameTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">announcement</span>
+                <span class="ignored-method-name">switchToSportsGameWindow</span>
                 <br/>
-                <span class="ignored-method-name">selectGameSports</span>
+                <span class="ignored-method-name">announcement</span>
                 <br/>
                 <span class="ignored-method-name">login</span>
                 <br/>
@@ -481,54 +482,54 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">openGame.OpenPokerGameTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">openGame.OpenESportsGameTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">startReportAndSetProperty(Windows WEB, Chrome, JDK/JRE 17, Jordan)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">goToSite(https://pr3l1v3.com)</span>
-                <span class="method-start">1091 ms</span>
+                <span class="method-start">1104 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">logCaseStatus([TestResult name=goToSite status=SUCCESS method=OpenPokerGameTest.goToSite(java.lang.String)[pri:0, ...)</span>
-                <span class="method-start">18783 ms</span>
+                <span class="method-name">logCaseStatus([TestResult name=goToSite status=SUCCESS method=OpenESportsGameTest.goToSite(java.lang.String)[pri:0...)</span>
+                <span class="method-start">4871 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">announcement</span>
-                <span class="method-start">20193 ms</span>
+                <span class="method-start">5940 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">logCaseStatus([TestResult name=announcement status=SUCCESS method=OpenPokerGameTest.announcement()[pri:1, instance...)</span>
-                <span class="method-start">20222 ms</span>
+                <span class="method-name">logCaseStatus([TestResult name=announcement status=SUCCESS method=OpenESportsGameTest.announcement()[pri:1, instan...)</span>
+                <span class="method-start">5967 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">login(qctestergame001)</span>
-                <span class="method-start">21313 ms</span>
+                <span class="method-start">6985 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">logCaseStatus([TestResult name=login status=SUCCESS method=OpenPokerGameTest.login(java.lang.String)[pri:2, instan...)</span>
-                <span class="method-start">26619 ms</span>
+                <span class="method-name">logCaseStatus([TestResult name=login status=SUCCESS method=OpenESportsGameTest.login(java.lang.String)[pri:2, inst...)</span>
+                <span class="method-start">12253 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">pokerGame(FG, FG POKER INR)</span>
-                <span class="method-start">27655 ms</span>
+                <span class="method-name">eSportsGame(IBC, IM ESPORTS INR, IBC ESPORTS INR, IA ESPORTS INR)</span>
+                <span class="method-start">13288 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">logCaseStatus([TestResult name=pokerGame status=SUCCESS method=OpenPokerGameTest.pokerGame(java.lang.String,java.l...)</span>
-                <span class="method-start">31922 ms</span>
+                <span class="method-name">logCaseStatus([TestResult name=eSportsGame status=SUCCESS method=OpenESportsGameTest.eSportsGame(java.lang.String,...)</span>
+                <span class="method-start">15001 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">selectGamePoker(FG, Baccarat)</span>
-                <span class="method-start">32510 ms</span>
+                <span class="method-name">switchToGameESportsWindow</span>
+                <span class="method-start">15781 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">logCaseStatus([TestResult name=selectGamePoker status=SUCCESS method=OpenPokerGameTest.selectGamePoker(java.lang.S...)</span>
-                <span class="method-start">36263 ms</span>
+                <span class="method-name">logCaseStatus([TestResult name=switchToGameESportsWindow status=SUCCESS method=OpenESportsGameTest.switchToGameESp...)</span>
+                <span class="method-start">27370 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">stopDriver</span>
-                <span class="method-start">36416 ms</span>
+                <span class="method-start">27596 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -66,27 +66,56 @@ public class OpenSlotsGameTest extends VariablesStore {
 	}
 
 	@Test(priority = 3, groups = { "slotsGame", "slots" })
-	@Parameters({ "vendorSlots", "vendorSlotsMain" })
-	public void slotsGame(String vendorSlots, String vendorSlotsMain) throws FailedLoginException, InterruptedException {
+	@Parameters({ "vendorSlotsMaster", "vendorSlotsBBIN", "vendorSlotsHC", "vendorSlotsPTTCG", "vendorSlotsPP", "vendorSlotsMG", "vendorSlotsCQ9", "vendorSlotsJDB" })
+	public void slotsGame(String vendorSlotsMaster, String vendorSlotsBBIN, String vendorSlotsHC, String vendorSlotsPTTCG, String vendorSlotsPP, String vendorSlotsMG, String vendorSlotsCQ9, String vendorSlotsJDB) throws FailedLoginException, InterruptedException {
 		cR.createTest("slotsGame");
 		sSG.selectSlots();
-		if (vendorSlotsMain.equalsIgnoreCase("yes")) {
+		if (vendorSlotsMaster.equalsIgnoreCase("AG")) {
 			sSG.selectMainVendor();
-		} else {
-			sSG.selectOtherVendor(vendorSlots);
+		}  else if (vendorSlotsMaster.equalsIgnoreCase("BBIN")) {
+			sSG.selectOtherVendor(vendorSlotsBBIN);
+		} else if (vendorSlotsMaster.equalsIgnoreCase("HC")) {
+			sSG.selectOtherVendor(vendorSlotsHC);
+		} else if (vendorSlotsMaster.equalsIgnoreCase("PTTCG")) {
+			sSG.selectOtherVendor(vendorSlotsPTTCG);
+		} else if (vendorSlotsMaster.equalsIgnoreCase("PP")) {
+			sSG.selectOtherVendor(vendorSlotsPP);
+		} else if (vendorSlotsMaster.equalsIgnoreCase("MG")) {
+			sSG.selectOtherVendor(vendorSlotsMG);
+		} else if (vendorSlotsMaster.equalsIgnoreCase("CQ9")) {
+			sSG.selectOtherVendor(vendorSlotsCQ9);
+		} else if (vendorSlotsMaster.equalsIgnoreCase("JDB")) {
+			sSG.selectOtherVendor(vendorSlotsJDB);
 		}
 	}
 
 	@Test(priority = 4, groups = { "selectGame", "slots" })
-	@Parameters({ "gameNameSlots", "gameNameSlotsMain", "vendorSlotsMain" })
-	public void selectGameSlots(String gameNameSlots, String gameNameSlotsMain, String vendorSlotsMain) throws FailedLoginException, InterruptedException {
+	@Parameters({ "vendorSlotsMaster", "gameNameSlotsAG", "gameNameSlotsBBIN", "gameNameSlotsHC", "gameNameSlotsPTTCG", "gameNameSlotsPP", "gameNameSlotsMG", "gameNameSlotsCQ9", "gameNameSlotsJDB" })
+	public void selectGameSlots(String vendorSlotsMaster, String gameNameSlotsAG, String gameNameSlotsBBIN, String gameNameSlotsHC, String gameNameSlotsPTTCG, String gameNameSlotsPP, String gameNameSlotsMG, String gameNameSlotsCQ9, String gameNameSlotsJDB) throws FailedLoginException, InterruptedException {
 		cR.createTest("selectGameSlots");
-		if (vendorSlotsMain.equals("yes")) {
-			sSG.selectGameInVendor(gameNameSlotsMain);
-		} else {
-			sSG.selectGameInVendor(gameNameSlots);
+		if (vendorSlotsMaster.equalsIgnoreCase("AG")) {
+			sSG.selectGameInVendor(gameNameSlotsAG);
+		} else if (vendorSlotsMaster.equalsIgnoreCase("BBIN")) {
+			sSG.selectGameInVendor(gameNameSlotsBBIN);
+		} else if (vendorSlotsMaster.equalsIgnoreCase("HC")) {
+			sSG.selectGameInVendor(gameNameSlotsHC);
+		} else if (vendorSlotsMaster.equalsIgnoreCase("PTTCG")) {
+			sSG.selectGameInVendor(gameNameSlotsPTTCG);
+		} else if (vendorSlotsMaster.equalsIgnoreCase("PP")) {
+			sSG.selectGameInVendor(gameNameSlotsPP);
+		} else if (vendorSlotsMaster.equalsIgnoreCase("MG")) {
+			sSG.selectGameInVendor(gameNameSlotsMG);
+		} else if (vendorSlotsMaster.equalsIgnoreCase("CQ9")) {
+			sSG.selectGameInVendor(gameNameSlotsCQ9);
+		} else if (vendorSlotsMaster.equalsIgnoreCase("JDB")) {
+			sSG.selectGameInVendor(gameNameSlotsJDB);
 		}
-		Thread.sleep(1500);
+	}
+
+	@Test(priority = 5, groups = { "switchToGameSlotsWindwo", "slots" })
+	public void switchToGameSlotsWindwo() throws FailedLoginException, InterruptedException {
+		cR.createTest("switchToGameSlotsWindwo");
+		sSG.switchWindow();
 	}
 
 	@AfterMethod(groups = { "slots" })
@@ -96,8 +125,7 @@ public class OpenSlotsGameTest extends VariablesStore {
 
 	@AfterClass(groups = { "slots" })
 	public void stopDriver() throws InterruptedException {
-		Thread.sleep(1500);
+		Thread.sleep(500);
 		cR.flushTest();
-//		bDriver.stopDriver();
 	}
 }

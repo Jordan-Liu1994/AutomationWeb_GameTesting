@@ -85,11 +85,10 @@ public class OpenLiveCasinoGameTest extends VariablesStore {
 		}
 	}
 
-	@Test(priority = 4, groups = { "selectGameLiveCasino", "liveCasino" })
-	public void selectGameLiveCasino() throws FailedLoginException, InterruptedException {
-		cR.createTest("selectGameLiveCasino");
-		sLCG.selectGameInVendor();
-		Thread.sleep(1500);
+	@Test(priority = 4, groups = { "switchToLiveCasinoWindow", "liveCasino" })
+	public void switchToLiveCasinoWindow() throws InterruptedException {
+		cR.createTest("switchToLiveCasinoWindow");
+		sLCG.switchWindow();
 	}
 
 	@AfterMethod(groups = { "liveCasino" })
@@ -99,8 +98,7 @@ public class OpenLiveCasinoGameTest extends VariablesStore {
 
 	@AfterClass(groups = { "liveCasino" })
 	public void stopDriver() throws InterruptedException {
-		Thread.sleep(1500);
+		Thread.sleep(500);
 		cR.flushTest();
-//		bDriver.stopDriver();
 	}
 }

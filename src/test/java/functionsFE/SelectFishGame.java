@@ -21,6 +21,8 @@ public class SelectFishGame extends VariablesStore {
 
 	WebDriverWait wait;
 	String fail;
+	String parentWindowHandle;
+	Set<String> nextWindowHandle;
 
 	public void selectFish() throws FailedLoginException {
 		fail = "selectFish failed";
@@ -71,9 +73,6 @@ public class SelectFishGame extends VariablesStore {
 		}
 	}
 
-	String parentWindowHandle;
-	Set<String> nextWindowHandle;
-
 	public void selectGameInVendor(String gameName) throws FailedLoginException, InterruptedException {
 		fail = "selectGameInVendor failed";
 
@@ -87,17 +86,22 @@ public class SelectFishGame extends VariablesStore {
 
 		if (selectGameInVendor.isDisplayed()) {
 			selectGameInVendor.click();
-			nextWindowHandle = bDriver.getDriver().getWindowHandles();
 			cR.getExtentTest().info("Clicked " + selectGameInVendorText);
-			Thread.sleep(1500);
-			Iterator<String> iterate = nextWindowHandle.iterator();
-			while (iterate.hasNext()) {
-				String winHandle = iterate.next();
-				bDriver.getDriver().switchTo().window(winHandle);
-				System.out.println(winHandle);
-			}
 		} else {
 			cR.getExtentTest().fail(fail);
 		}
+	}
+
+	public void switchWindow() throws InterruptedException {
+		nextWindowHandle = bDriver.getDriver().getWindowHandles();
+		Thread.sleep(500);
+		Iterator<String> iterate = nextWindowHandle.iterator();
+		while (iterate.hasNext()) {
+			String winHandle = iterate.next();
+			bDriver.getDriver().switchTo().window(winHandle);
+			System.out.println(winHandle);
+			bDriver.getDriver().manage().window().maximize();
+		}
+		Thread.sleep(10000);
 	}
 }

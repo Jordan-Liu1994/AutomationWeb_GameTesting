@@ -68,19 +68,19 @@ public class OpenFishGameTest extends VariablesStore {
 	}
 
 	@Test(priority = 3, groups = { "fishGame", "fish" })
-	@Parameters({ "vendorFishMaster", "vendorFishBBIN", "vendorFishPP", "vendorFishMainJDB", "vendorFishMainMT", "vendorFishMainFG" })
-	public void fishGame(String vendorFishMaster, String vendorFishBBIN, String vendorFishPP, String vendorFishMainJDB, String vendorFishMainMT, String vendorFishMainFG) throws FailedLoginException, InterruptedException {
+	@Parameters({ "vendorFishMaster", "vendorFishPP", "vendorFishMainJDB", "vendorFishMainMT", "vendorFishMainFG" })
+	public void fishGame(String vendorFishMaster, String vendorFishPP, String vendorFishMainJDB, String vendorFishMainMT, String vendorFishMainFG) throws FailedLoginException, InterruptedException {
 		cR.createTest("fishGame");
 		sFG.selectFish();
-		if (vendorFishMaster.equals("BBIN")) {
+		if (vendorFishMaster.equalsIgnoreCase("BBIN")) {
 			sFG.selectMainVendor();
-		} else if (vendorFishMaster.equals("PP")) {
+		} else if (vendorFishMaster.equalsIgnoreCase("PP")) {
 			sFG.selectOtherVendor(vendorFishPP);
-		} else if (vendorFishMaster.equals("JDB")) {
+		} else if (vendorFishMaster.equalsIgnoreCase("JDB")) {
 			sFG.selectOtherVendor(vendorFishMainJDB);
-		} else if (vendorFishMaster.equals("MT")) {
+		} else if (vendorFishMaster.equalsIgnoreCase("MT")) {
 			sFG.selectOtherVendor(vendorFishMainMT);
-		} else if (vendorFishMaster.equals("FG")) {
+		} else if (vendorFishMaster.equalsIgnoreCase("FG")) {
 			sFG.selectOtherVendor(vendorFishMainFG);
 		}
 	}
@@ -89,18 +89,23 @@ public class OpenFishGameTest extends VariablesStore {
 	@Parameters({ "vendorFishMaster", "gameNameFishBBIN", "gameNameFishPP", "gameNameFishJDB", "gameNameFishMT", "gameNameFishFG" })
 	public void selectGameFish(String vendorFishMaster, String gameNameFishBBIN, String gameNameFishPP, String gameNameFishJDB, String gameNameFishMT, String gameNameFishFG) throws FailedLoginException, InterruptedException {
 		cR.createTest("selectGameFish");
-		if (vendorFishMaster.equals("BBIN")) {
+		if (vendorFishMaster.equalsIgnoreCase("BBIN")) {
 			sFG.selectGameInVendor(gameNameFishBBIN);
-		} else if (vendorFishMaster.equals("PP")) {
+		} else if (vendorFishMaster.equalsIgnoreCase("PP")) {
 			sFG.selectGameInVendor(gameNameFishPP);
-		} else if (vendorFishMaster.equals("JDB")) {
+		} else if (vendorFishMaster.equalsIgnoreCase("JDB")) {
 			sFG.selectGameInVendor(gameNameFishJDB);
-		} else if (vendorFishMaster.equals("MT")) {
+		} else if (vendorFishMaster.equalsIgnoreCase("MT")) {
 			sFG.selectGameInVendor(gameNameFishMT);
-		} else if (vendorFishMaster.equals("FG")) {
+		} else if (vendorFishMaster.equalsIgnoreCase("FG")) {
 			sFG.selectGameInVendor(gameNameFishFG);
 		}
-		Thread.sleep(1500);
+	}
+	
+	@Test(priority = 5, groups = { "switchToFishWindow", "fish" })
+	public void switchToFishWindow() throws InterruptedException {
+		cR.createTest("switchToFishWindow");
+		sFG.switchWindow();
 	}
 
 	@AfterMethod(groups = { "fish" })
@@ -112,6 +117,5 @@ public class OpenFishGameTest extends VariablesStore {
 	public void stopDriver() throws InterruptedException {
 		Thread.sleep(1500);
 		cR.flushTest();
-//		bDriver.stopDriver();
 	}
 }

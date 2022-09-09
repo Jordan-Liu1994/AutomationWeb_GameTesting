@@ -8,38 +8,40 @@
 	<parameter name="automationAuthor" value="Jordan"></parameter>
 	<parameter name="userIDFE" value="qctestergame001"></parameter>
 
-	<!-- to select other game vendors and game name in vendor list, edit the values in the 2 parameters below -->
-	<parameter name="vendorSlotsMain" value="no"></parameter>
-	<parameter name="gameNameSlotsMain" value="Kung Fu All Stars"></parameter>
+	<!-- to test other game vendors and game edit the value below (Line 12) -->
+	<parameter name="vendorSlotsMaster" value="PP"></parameter>
 
-	<!-- <parameter name="vendorSlots" value="BBIN SLOTS INR"></parameter>
-	<parameter name="gameNameSlots" value="Staronic"></parameter>-->
+	<!-- <parameter name="vendorSlotsAG" value="AG"></parameter>-->
+	<parameter name="gameNameSlotsAG" value="Kung Fu All Stars"></parameter>
 
-	<parameter name="vendorSlots" value="HC SLOTS INR"></parameter>
-	<parameter name="gameNameSlots" value="King of Fighters"></parameter>
+	<parameter name="vendorSlotsBBIN" value="BBIN SLOTS INR"></parameter>
+	<parameter name="gameNameSlotsBBIN" value="Staronic"></parameter>
 
-	<!-- <parameter name="vendorSlots" value="PTTCG SLOTS INR"></parameter>
-	<parameter name="gameNameSlots" value="Fortune Lions"></parameter>
+	<parameter name="vendorSlotsHC" value="HC SLOTS INR"></parameter>
+	<parameter name="gameNameSlotsHC" value="King of Fighters"></parameter>
 
-	<parameter name="vendorSlots" value="PP SLOTS INR"></parameter>
-	<parameter name="gameNameSlots" value="Hot to Burn"></parameter>
-	
-	<parameter name="vendorSlots" value="MG SLOTS INR"></parameter>
-	<parameter name="gameNameSlots" value="Kings of Crystals"></parameter>
-	
-	<parameter name="vendorSlots" value="CQ9 SLOTS INR"></parameter>
-	<parameter name="gameNameSlots" value="Jump High 2"></parameter>
-	
-	<parameter name="vendorSlots" value="JDB SLOTS INR"></parameter>
-	<parameter name="gameNameSlots" value="Winning Mask"></parameter>-->
+	<parameter name="vendorSlotsPTTCG" value="PTTCG SLOTS INR"></parameter>
+	<parameter name="gameNameSlotsPTTCG" value="Fortune Lions"></parameter>
 
-	<!-- to select other game vendors and game name in vendor list, edit the values in the 2 parameters below -->
+	<parameter name="vendorSlotsPP" value="PP SLOTS INR"></parameter>
+	<parameter name="gameNameSlotsPP" value="Hot to Burn"></parameter>
+
+	<parameter name="vendorSlotsMG" value="MG SLOTS INR"></parameter>
+	<parameter name="gameNameSlotsMG" value="Kings of Crystals"></parameter>
+
+	<parameter name="vendorSlotsCQ9" value="CQ9 SLOTS INR"></parameter>
+	<parameter name="gameNameSlotsCQ9" value="Jump High 2"></parameter>
+
+	<parameter name="vendorSlotsJDB" value="JDB SLOTS INR"></parameter>
+	<parameter name="gameNameSlotsJDB" value="Winning Mask"></parameter>
+
+	<!-- to test other game vendors and game edit the value below (Line 39) -->
 	<parameter name="vendorPokerMaster" value="FG"></parameter>
-	
+
 	<parameter name="vendorPokerFG" value="FG POKER INR"></parameter>
 	<parameter name="gameNamePokerFG" value="Baccarat"></parameter>
 
-	<!-- to select other game vendors and game name in vendor list, edit the values in the 2 parameters below -->
+	<!-- to test other game vendors and game edit the value below (Line 45) -->
 	<parameter name="vendorSportsMaster" value="IM"></parameter>
 
 	<parameter name="vendorSportsOBG" value="OBGSPORTSBOOK INR"></parameter>
@@ -50,7 +52,7 @@
 
 	<parameter name="vendorSportsUG" value="UG SPORT INR"></parameter>
 
-	<!-- to select other game vendors and game name in vendor list, edit the values in the 2 parameters below -->
+	<!-- to test other game vendors and game edit the value below (Line 56) -->
 	<parameter name="vendorLiveCasinoMaster" value="dg"></parameter>
 
 	<parameter name="vendorLiveCasinoAG" value="AG CASINO INR"></parameter>
@@ -65,7 +67,7 @@
 
 	<parameter name="vendorLiveCasinoEBET" value="EBET CASINO INR"></parameter>
 
-	<!-- to select other game vendors and game name in vendor list, edit the values in the 2 parameters below -->
+	<!-- to test other game vendors and game edit the value below (Line 71) -->
 	<parameter name="vendorFishMaster" value="FG"></parameter>
 
 	<!-- <parameter name="vendorFishBBIN" value="BBIN FISH INR"></parameter> -->
@@ -83,7 +85,7 @@
 	<parameter name="vendorFishMainFG" value="FG FISH INR"></parameter>
 	<parameter name="gameNameFishFG" value="Daily Fishing"></parameter>
 
-	<!-- to select other game vendors and game name in vendor list, edit the values in the 2 parameters below -->
+	<!-- to test other game vendors and game edit the value below (Line 89) -->
 	<parameter name="vendorESportsMaster" value="IBC"></parameter>
 
 	<parameter name="vendorESportsIM" value="IM ESPORTS INR"></parameter>
@@ -95,8 +97,8 @@
 	<test thread-count="5" name="OpenGame">
 		<groups>
 			<run>
-				<exclude name="slots"></exclude>
-				<!-- <exclude name="poker"></exclude> -->
+				<!-- <exclude name="slots"></exclude> -->
+				<exclude name="poker"></exclude>
 				<exclude name="sports"></exclude>
 				<exclude name="liveCasino"></exclude>
 				<exclude name="eSports"></exclude>

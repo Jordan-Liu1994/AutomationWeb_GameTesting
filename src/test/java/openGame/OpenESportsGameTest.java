@@ -79,11 +79,10 @@ public class OpenESportsGameTest extends VariablesStore {
 		}
 	}
 
-	@Test(priority = 4, groups = { "selectGameESports", "eSports" })
-	public void selectGameESports() throws FailedLoginException, InterruptedException {
-		cR.createTest("selectGameESports");
-		sESG.selectGameInVendor();
-		Thread.sleep(1500);
+	@Test(priority = 4, groups = { "switchToGameESportsWindow", "eSports" })
+	public void switchToGameESportsWindow() throws InterruptedException {
+		cR.createTest("switchToGameESportsWindow");
+		sESG.switchWindow();
 	}
 
 	@AfterMethod(groups = { "eSports" })
@@ -93,8 +92,7 @@ public class OpenESportsGameTest extends VariablesStore {
 
 	@AfterClass(groups = { "eSports" })
 	public void stopDriver() throws InterruptedException {
-		Thread.sleep(1500);
+		Thread.sleep(500);
 		cR.flushTest();
-//		bDriver.stopDriver();
 	}
 }

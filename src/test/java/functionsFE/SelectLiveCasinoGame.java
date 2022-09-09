@@ -2,13 +2,10 @@ package functionsFE;
 
 import java.util.Iterator;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import javax.security.auth.login.FailedLoginException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -35,7 +32,6 @@ public class SelectLiveCasinoGame extends VariablesStore {
 		if (selectLiveCasino.isDisplayed()) {
 			selectLiveCasino.click();
 			cR.getExtentTest().info("Clicked " + selectLiveCasinoText);
-			parentWindowHandle = bDriver.getDriver().getWindowHandle();
 		} else {
 			cR.getExtentTest().fail(fail);
 			throw new FailedLoginException(fail);
@@ -50,27 +46,27 @@ public class SelectLiveCasinoGame extends VariablesStore {
 		wait.until(ExpectedConditions.visibilityOf(selectVendor));
 		wait.until(ExpectedConditions.elementToBeClickable(selectVendor));
 		String selectVendorText = selectVendor.getText();
+		parentWindowHandle = bDriver.getDriver().getWindowHandle();
+		Thread.sleep(500);
 
 		if (selectVendor.isDisplayed()) {
 			selectVendor.click();
 			cR.getExtentTest().info("Clicked " + selectVendorText);
-			Thread.sleep(1000);
 		} else {
 			cR.getExtentTest().fail(fail);
 		}
 	}
 
-	public void selectGameInVendor() throws FailedLoginException, InterruptedException {
-		fail = "selectGameInVendor failed";
-
-		Thread.sleep(1000);
+	public void switchWindow() throws InterruptedException {
 		nextWindowHandle = bDriver.getDriver().getWindowHandles();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		Iterator<String> iterate = nextWindowHandle.iterator();
 		while (iterate.hasNext()) {
 			String winHandle = iterate.next();
 			bDriver.getDriver().switchTo().window(winHandle);
 			System.out.println(winHandle);
+			bDriver.getDriver().manage().window().maximize();
 		}
+		Thread.sleep(10000);
 	}
 }

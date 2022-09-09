@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite-OpenGame]" guice-stage="DEVELOPMENT">
+  <parameter name="vendorPokerFG" value="FG POKER INR"/>
+  <parameter name="gameNamePokerFG" value="Baccarat"/>
   <parameter name="vendorSportsIM" value="IM SPORT INR"/>
   <parameter name="vendorFishPP" value="PP FISH INR"/>
   <parameter name="vendorFishMainJDB" value="JDB FISH INR"/>
@@ -9,7 +11,6 @@
   <parameter name="vendorSlotsMain" value="no"/>
   <parameter name="vendorESportsIM" value="IM ESPORTS INR"/>
   <parameter name="gameNameFishMT" value="Crazy Fishing"/>
-  <parameter name="gameNamePoker" value="Baccarat"/>
   <parameter name="vendorLiveCasinoAllbet" value="Allbet CASINO INR"/>
   <parameter name="vendorSportsOBG" value="OBGSPORTSBOOK INR"/>
   <parameter name="browserName" value="Chrome"/>
@@ -25,7 +26,6 @@
   <parameter name="gameNameFishFG" value="Daily Fishing"/>
   <parameter name="automationAuthor" value="Jordan"/>
   <parameter name="gameNameSlots" value="King of Fighters"/>
-  <parameter name="vendorPoker" value="FG POKER INR"/>
   <parameter name="vendorFishMainMT" value="MT FISH INR"/>
   <parameter name="vendorSlots" value="HC SLOTS INR"/>
   <parameter name="vendorFishMaster" value="FG"/>
@@ -36,6 +36,7 @@
   <parameter name="vendorESportsIA" value="IA ESPORTS INR"/>
   <parameter name="vendorESportsIBC" value="IBC ESPORTS INR"/>
   <parameter name="vendorESportsMaster" value="IBC"/>
+  <parameter name="vendorPokerMaster" value="FG"/>
   <parameter name="gameNameSlotsMain" value="Kung Fu All Stars"/>
   <parameter name="userIDFE" value="qctestergame001"/>
   <parameter name="vendorLiveCasinoAG" value="AG CASINO INR"/>
@@ -44,18 +45,20 @@
       <run>
         <exclude name="slots"/>
         <exclude name="poker"/>
+        <exclude name="sports"/>
         <exclude name="liveCasino"/>
         <exclude name="eSports"/>
-        <exclude name="fish"/>
       </run>
     </groups>
     <classes>
       <class name="openGame.OpenFishGameTest">
         <methods>
+          <include name="switchToFishWindow"/>
           <include name="selectGameFish" invocation-numbers="0"/>
           <include name="fishGame"/>
           <include name="stopDriver"/>
           <include name="logCaseStatus"/>
+          <include name="startReportAndSetProperty"/>
         </methods>
       </class> <!-- openGame.OpenFishGameTest -->
     </classes>

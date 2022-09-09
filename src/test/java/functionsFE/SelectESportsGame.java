@@ -31,11 +31,11 @@ public class SelectESportsGame extends VariablesStore {
 		WebElement selectESports = bDriver.getDriver().findElement(By.xpath("(//div[@class='header_menu_item'])[7]"));
 		wait.until(ExpectedConditions.elementToBeClickable(selectESports));
 		String selectESportsText = selectESports.getText();
+		parentWindowHandle = bDriver.getDriver().getWindowHandle();
 
 		if (selectESports.isDisplayed()) {
 			selectESports.click();
 			cR.getExtentTest().info("Clicked " + selectESportsText);
-			parentWindowHandle = bDriver.getDriver().getWindowHandle();
 		} else {
 			cR.getExtentTest().fail(fail);
 			throw new FailedLoginException(fail);
@@ -50,27 +50,26 @@ public class SelectESportsGame extends VariablesStore {
 		wait.until(ExpectedConditions.visibilityOf(selectVendor));
 		wait.until(ExpectedConditions.elementToBeClickable(selectVendor));
 		String selectVendorText = selectVendor.getText();
+		Thread.sleep(500);
 
 		if (selectVendor.isDisplayed()) {
 			selectVendor.click();
 			cR.getExtentTest().info("Clicked " + selectVendorText);
-			Thread.sleep(1000);
 		} else {
 			cR.getExtentTest().fail(fail);
 		}
 	}
 
-	public void selectGameInVendor() throws FailedLoginException, InterruptedException {
-		fail = "selectGameInVendor failed";
-
-		Thread.sleep(1000);
+	public void switchWindow() throws InterruptedException {
 		nextWindowHandle = bDriver.getDriver().getWindowHandles();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		Iterator<String> iterate = nextWindowHandle.iterator();
 		while (iterate.hasNext()) {
 			String winHandle = iterate.next();
 			bDriver.getDriver().switchTo().window(winHandle);
 			System.out.println(winHandle);
+			bDriver.getDriver().manage().window().maximize();
 		}
+		Thread.sleep(10000);
 	}
 }

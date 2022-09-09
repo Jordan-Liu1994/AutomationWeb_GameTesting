@@ -29,7 +29,7 @@ public class OpenSportsGameTest extends VariablesStore {
 	LogoutFE lOFE = new LogoutFE();
 	SelectSportsGame sSG = new SelectSportsGame();
 
-	private static String nameOfReport = "OpenPokerGameTest";
+	private static String nameOfReport = "OpenSportsGameTest";
 
 	@BeforeClass(groups = { "Start", "sports" })
 	@Parameters({ "platformName", "browserName", "javaVersion", "automationAuthor" })
@@ -81,11 +81,10 @@ public class OpenSportsGameTest extends VariablesStore {
 		}
 	}
 
-	@Test(priority = 4, groups = { "selectGameSports", "sports" })
-	public void selectGameSports() throws FailedLoginException, InterruptedException {
-		cR.createTest("selectGameSports");
-		sSG.selectGameInVendor();
-		Thread.sleep(1500);
+	@Test(priority = 4, groups = { "switchToSportsGameWindow", "sports" })
+	public void switchToSportsGameWindow() throws InterruptedException {
+		cR.createTest("switchToSportsGameWindow");
+		sSG.switchWindow();
 	}
 
 	@AfterMethod(groups = { "sports" })
@@ -95,8 +94,7 @@ public class OpenSportsGameTest extends VariablesStore {
 
 	@AfterClass(groups = { "sports" })
 	public void stopDriver() throws InterruptedException {
-		Thread.sleep(1500);
+		Thread.sleep(500);
 		cR.flushTest();
-//		bDriver.stopDriver();
 	}
 }

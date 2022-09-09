@@ -66,23 +66,20 @@ public class OpenPokerGameTest extends VariablesStore {
 	}
 
 	@Test(priority = 3, groups = { "pokerGame", "poker" })
-	@Parameters({ "vendorPokerMaster", "vendorPokerFG" })
-	public void pokerGame(String vendorPokerMaster, String vendorPokerFG) throws FailedLoginException, InterruptedException {
+	@Parameters({ "vendorPokerMaster", "vendorPokerFG", "gameNamePokerFG" })
+	public void pokerGame(String vendorPokerMaster, String vendorPokerFG, String gameNamePokerFG) throws FailedLoginException, InterruptedException {
 		cR.createTest("pokerGame");
 		sSG.selectPoker();
 		if (vendorPokerMaster.equalsIgnoreCase("FG")) {
 			sSG.selectVendor(vendorPokerFG);
+			sSG.selectGameInVendor(gameNamePokerFG);
 		}
 	}
 
-	@Test(priority = 4, groups = { "selectGamePoker", "poker" })
-	@Parameters({ "vendorPokerMaster", "gameNamePokerFG" })
-	public void selectGamePoker(String vendorPokerMaster, String gameNamePokerFG) throws FailedLoginException, InterruptedException {
-		cR.createTest("selectGamePoker");
-		if (vendorPokerMaster.equalsIgnoreCase("FG")) {
-			sSG.selectGameInVendor(gameNamePokerFG);
-		}
-		Thread.sleep(1500);
+	@Test(priority = 4, groups = { "switchToPokerGameWindow", "poker" })
+	public void switchToPokerGameWindow() throws FailedLoginException, InterruptedException {
+		cR.createTest("switchToPokerGameWindow");
+		sSG.switchWindows();
 	}
 
 	@AfterMethod(groups = { "poker" })
@@ -92,8 +89,7 @@ public class OpenPokerGameTest extends VariablesStore {
 
 	@AfterClass(groups = { "poker" })
 	public void stopDriver() throws InterruptedException {
-		Thread.sleep(1500);
+		Thread.sleep(500);
 		cR.flushTest();
-//		bDriver.stopDriver();
 	}
 }
