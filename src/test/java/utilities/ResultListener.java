@@ -10,13 +10,11 @@ public class ResultListener extends VariablesStore {
 
 	TakeScreenShot takeSS = new TakeScreenShot();
 	CreateReport cR = new CreateReport();
-	
+
 	public void logCaseStatus(ITestResult result) {
 		String resultOfCaseStatus = result.getName();
 		if (result.getStatus() == ITestResult.SUCCESS) {
-			takeSS.getPassScreenShot(resultOfCaseStatus);
 			cR.getExtentTest().pass(step + resultOfCaseStatus + " is passed!");
-			cR.getExtentTest().addScreenCaptureFromPath(takeSS.screenShotPathExtent() + resultOfCaseStatus + passSS, resultOfCaseStatus);
 		}
 		if (result.getStatus() == ITestResult.SKIP) {
 			cR.getExtentTest().skip(step + resultOfCaseStatus + " is skipped!");

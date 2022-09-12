@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite-OpenGameKY">
+	<parameter name="gameVendorXpathNumber" value="53"></parameter>
+	<parameter name="gameName1" value="红包捕鱼"></parameter>
+	<parameter name="gameName2" value="李逵捕鱼"></parameter>
+	<parameter name="gameName3" value="捕鱼传说"></parameter>
+
+	<test thread-count="5" name="OpenGameKY">
+		<groups>
+			<run>
+				<exclude name="login"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="openFishGame.OpenFishGameKY"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

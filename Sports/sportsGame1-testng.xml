@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite-OpenSportsGame">
+	<parameter name="gameVendorXpathNumber" value="71"></parameter>
+
+	<test thread-count="5" name="OpenSportsGame">
+		<classes>
+			<class name="openSportsGame.OpenSportsGame1"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

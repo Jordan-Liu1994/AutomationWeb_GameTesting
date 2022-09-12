@@ -1,35 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="26" total="31" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-09T12:28:01 SGT" name="Suite-OpenGame" finished-at="2022-09-09T12:28:29 SGT" duration-ms="28310">
+  <suite started-at="2022-09-12T17:41:48 SGT" name="Suite-OpenPokerGame" finished-at="2022-09-12T17:42:30 SGT" duration-ms="42414">
     <groups>
-      <group name="eSports">
-        <method signature="OpenESportsGameTest.announcement()[pri:1, instance:openGame.OpenESportsGameTest@47af7f3d]" name="announcement" class="openGame.OpenESportsGameTest"/>
-        <method signature="OpenESportsGameTest.eSportsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:openGame.OpenESportsGameTest@47af7f3d]" name="eSportsGame" class="openGame.OpenESportsGameTest"/>
-        <method signature="OpenESportsGameTest.goToSite(java.lang.String)[pri:0, instance:openGame.OpenESportsGameTest@47af7f3d]" name="goToSite" class="openGame.OpenESportsGameTest"/>
-        <method signature="OpenESportsGameTest.login(java.lang.String)[pri:2, instance:openGame.OpenESportsGameTest@47af7f3d]" name="login" class="openGame.OpenESportsGameTest"/>
-        <method signature="OpenESportsGameTest.switchToGameESportsWindow()[pri:4, instance:openGame.OpenESportsGameTest@47af7f3d]" name="switchToGameESportsWindow" class="openGame.OpenESportsGameTest"/>
-      </group> <!-- eSports -->
-      <group name="eSportsGame">
-        <method signature="OpenESportsGameTest.eSportsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:openGame.OpenESportsGameTest@47af7f3d]" name="eSportsGame" class="openGame.OpenESportsGameTest"/>
-      </group> <!-- eSportsGame -->
-      <group name="switchToGameESportsWindow">
-        <method signature="OpenESportsGameTest.switchToGameESportsWindow()[pri:4, instance:openGame.OpenESportsGameTest@47af7f3d]" name="switchToGameESportsWindow" class="openGame.OpenESportsGameTest"/>
-      </group> <!-- switchToGameESportsWindow -->
+      <group name="Poker">
+        <method signature="OpenPokerGame1.announcement()[pri:1, instance:openPokerGame.OpenPokerGame1@6eda5c9]" name="announcement" class="openPokerGame.OpenPokerGame1"/>
+        <method signature="OpenPokerGame1.goToSite(java.lang.String)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" name="goToSite" class="openPokerGame.OpenPokerGame1"/>
+        <method signature="OpenPokerGame1.login(java.lang.String)[pri:2, instance:openPokerGame.OpenPokerGame1@6eda5c9]" name="login" class="openPokerGame.OpenPokerGame1"/>
+        <method signature="OpenPokerGame1.selectSlotsVendor(java.lang.String)[pri:3, instance:openPokerGame.OpenPokerGame1@6eda5c9]" name="selectSlotsVendor" class="openPokerGame.OpenPokerGame1"/>
+      </group> <!-- Poker -->
       <group name="login">
-        <method signature="OpenESportsGameTest.login(java.lang.String)[pri:2, instance:openGame.OpenESportsGameTest@47af7f3d]" name="login" class="openGame.OpenESportsGameTest"/>
+        <method signature="OpenPokerGame1.login(java.lang.String)[pri:2, instance:openPokerGame.OpenPokerGame1@6eda5c9]" name="login" class="openPokerGame.OpenPokerGame1"/>
       </group> <!-- login -->
-      <group name="goToSite">
-        <method signature="OpenESportsGameTest.goToSite(java.lang.String)[pri:0, instance:openGame.OpenESportsGameTest@47af7f3d]" name="goToSite" class="openGame.OpenESportsGameTest"/>
-      </group> <!-- goToSite -->
-      <group name="announcement">
-        <method signature="OpenESportsGameTest.announcement()[pri:1, instance:openGame.OpenESportsGameTest@47af7f3d]" name="announcement" class="openGame.OpenESportsGameTest"/>
-      </group> <!-- announcement -->
     </groups>
-    <test started-at="2022-09-09T12:28:01 SGT" name="OpenGame" finished-at="2022-09-09T12:28:29 SGT" duration-ms="28310">
-      <class name="openGame.OpenESportsGameTest">
-        <test-method is-config="true" signature="startReportAndSetProperty(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:openGame.OpenESportsGameTest@47af7f3d]" started-at="2022-09-09T12:28:01 SGT" name="startReportAndSetProperty" finished-at="2022-09-09T12:28:02 SGT" duration-ms="1099" status="PASS">
+    <test started-at="2022-09-12T17:41:48 SGT" name="OpenPokerGame" finished-at="2022-09-12T17:42:30 SGT" duration-ms="42414">
+      <class name="openPokerGame.OpenPokerGame1">
+        <test-method is-config="true" signature="startReportAndSetProperty(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:48 SGT" name="startReportAndSetProperty" finished-at="2022-09-12T17:41:49 SGT" duration-ms="1503" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -55,44 +42,44 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReportAndSetProperty -->
-        <test-method signature="goToSite(java.lang.String)[pri:0, instance:openGame.OpenESportsGameTest@47af7f3d]" started-at="2022-09-09T12:28:02 SGT" name="goToSite" finished-at="2022-09-09T12:28:06 SGT" duration-ms="3765" status="PASS">
+        <test-method signature="goToSite(java.lang.String)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:49 SGT" name="goToSite" finished-at="2022-09-12T17:41:53 SGT" duration-ms="3394" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[https://pr3l1v3.com]]>
+                <![CDATA[https://new19membersite.the777888.com]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToSite -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:openGame.OpenESportsGameTest@47af7f3d]" started-at="2022-09-09T12:28:06 SGT" name="logCaseStatus" finished-at="2022-09-09T12:28:07 SGT" duration-ms="1068" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:53 SGT" name="logCaseStatus" finished-at="2022-09-12T17:41:53 SGT" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=goToSite status=SUCCESS method=OpenESportsGameTest.goToSite(java.lang.String)[pri:0, instance:openGame.OpenESportsGameTest@47af7f3d] output={null}]]]>
+                <![CDATA[[TestResult name=goToSite status=SUCCESS method=OpenPokerGame1.goToSite(java.lang.String)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="announcement()[pri:1, instance:openGame.OpenESportsGameTest@47af7f3d]" started-at="2022-09-09T12:28:07 SGT" name="announcement" finished-at="2022-09-09T12:28:07 SGT" duration-ms="26" status="PASS">
+        <test-method signature="announcement()[pri:1, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:53 SGT" name="announcement" finished-at="2022-09-12T17:41:53 SGT" duration-ms="51" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- announcement -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:openGame.OpenESportsGameTest@47af7f3d]" started-at="2022-09-09T12:28:07 SGT" name="logCaseStatus" finished-at="2022-09-09T12:28:08 SGT" duration-ms="1018" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:53 SGT" name="logCaseStatus" finished-at="2022-09-12T17:41:53 SGT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=announcement status=SUCCESS method=OpenESportsGameTest.announcement()[pri:1, instance:openGame.OpenESportsGameTest@47af7f3d] output={null}]]]>
+                <![CDATA[[TestResult name=announcement status=SUCCESS method=OpenPokerGame1.announcement()[pri:1, instance:openPokerGame.OpenPokerGame1@6eda5c9] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="login(java.lang.String)[pri:2, instance:openGame.OpenESportsGameTest@47af7f3d]" started-at="2022-09-09T12:28:08 SGT" name="login" finished-at="2022-09-09T12:28:13 SGT" duration-ms="5267" status="PASS">
+        <test-method signature="login(java.lang.String)[pri:2, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:53 SGT" name="login" finished-at="2022-09-12T17:41:56 SGT" duration-ms="3492" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -103,74 +90,48 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:openGame.OpenESportsGameTest@47af7f3d]" started-at="2022-09-09T12:28:13 SGT" name="logCaseStatus" finished-at="2022-09-09T12:28:14 SGT" duration-ms="1035" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:56 SGT" name="logCaseStatus" finished-at="2022-09-12T17:41:56 SGT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=OpenESportsGameTest.login(java.lang.String)[pri:2, instance:openGame.OpenESportsGameTest@47af7f3d] output={null}]]]>
+                <![CDATA[[TestResult name=login status=SUCCESS method=OpenPokerGame1.login(java.lang.String)[pri:2, instance:openPokerGame.OpenPokerGame1@6eda5c9] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="eSportsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:openGame.OpenESportsGameTest@47af7f3d]" started-at="2022-09-09T12:28:14 SGT" name="eSportsGame" finished-at="2022-09-09T12:28:16 SGT" duration-ms="1712" status="PASS">
+        <test-method signature="selectSlotsVendor(java.lang.String)[pri:3, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:56 SGT" name="selectSlotsVendor" finished-at="2022-09-12T17:42:29 SGT" duration-ms="32217" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[IBC]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[IM ESPORTS INR]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[IBC ESPORTS INR]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[IA ESPORTS INR]]>
+                <![CDATA[86]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- eSportsGame -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:openGame.OpenESportsGameTest@47af7f3d]" started-at="2022-09-09T12:28:16 SGT" name="logCaseStatus" finished-at="2022-09-09T12:28:17 SGT" duration-ms="780" status="PASS">
+        </test-method> <!-- selectSlotsVendor -->
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:42:29 SGT" name="logCaseStatus" finished-at="2022-09-12T17:42:29 SGT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=eSportsGame status=SUCCESS method=OpenESportsGameTest.eSportsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:openGame.OpenESportsGameTest@47af7f3d] output={null}]]]>
+                <![CDATA[[TestResult name=selectSlotsVendor status=SUCCESS method=OpenPokerGame1.selectSlotsVendor(java.lang.String)[pri:3, instance:openPokerGame.OpenPokerGame1@6eda5c9] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="switchToGameESportsWindow()[pri:4, instance:openGame.OpenESportsGameTest@47af7f3d]" started-at="2022-09-09T12:28:17 SGT" name="switchToGameESportsWindow" finished-at="2022-09-09T12:28:29 SGT" duration-ms="11589" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- switchToGameESportsWindow -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:openGame.OpenESportsGameTest@47af7f3d]" started-at="2022-09-09T12:28:29 SGT" name="logCaseStatus" finished-at="2022-09-09T12:28:29 SGT" duration-ms="226" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=switchToGameESportsWindow status=SUCCESS method=OpenESportsGameTest.switchToGameESportsWindow()[pri:4, instance:openGame.OpenESportsGameTest@47af7f3d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logCaseStatus -->
-        <test-method is-config="true" signature="stopDriver()[pri:0, instance:openGame.OpenESportsGameTest@47af7f3d]" started-at="2022-09-09T12:28:29 SGT" name="stopDriver" finished-at="2022-09-09T12:28:29 SGT" duration-ms="702" status="PASS">
+        <test-method is-config="true" signature="stopDriver()[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:42:29 SGT" name="stopDriver" finished-at="2022-09-12T17:42:30 SGT" duration-ms="1714" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopDriver -->
-      </class> <!-- openGame.OpenESportsGameTest -->
-    </test> <!-- OpenGame -->
+      </class> <!-- openPokerGame.OpenPokerGame1 -->
+    </test> <!-- OpenPokerGame -->
+  </suite> <!-- Suite-OpenPokerGame -->
+  <suite started-at="2022-09-12T17:42:30 SGT" name="Suite-OpenGame" finished-at="2022-09-12T17:42:30 SGT" duration-ms="0">
+    <groups>
+    </groups>
   </suite> <!-- Suite-OpenGame -->
 </testng-results>

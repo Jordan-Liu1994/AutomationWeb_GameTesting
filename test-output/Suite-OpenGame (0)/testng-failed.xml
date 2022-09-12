@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite-OpenGame (0)]" guice-stage="DEVELOPMENT">
+  <parameter name="gameNameBBIN1" value="糖果派对"/>
+  <parameter name="automationAuthor" value="Jordan"/>
+  <parameter name="javaVersion" value="JDK/JRE 17"/>
+  <parameter name="gameVendorXpathNumber" value="2"/>
+  <parameter name="browserName" value="Chrome"/>
+  <parameter name="gameNameBBIN4" value="外星争霸"/>
+  <parameter name="platformName" value="Windows WEB"/>
+  <parameter name="gameNameBBIN5" value="传统"/>
+  <parameter name="gameNameBBIN2" value="惑星战记"/>
+  <parameter name="url" value="https://new19membersite.the777888.com"/>
+  <parameter name="gameNameBBIN3" value="外星战记"/>
+  <test thread-count="5" name="OpenGame(failed)">
+    <classes>
+      <class name="openGame.OpenSlotsGameBBIN">
+        <methods>
+          <include name="startReportAndSetProperty"/>
+          <include name="logCaseStatus"/>
+          <include name="stopDriver"/>
+          <include name="selectSlotsGame"/>
+        </methods>
+      </class> <!-- openGame.OpenSlotsGameBBIN -->
+    </classes>
+  </test> <!-- OpenGame(failed) -->
+</suite> <!-- Failed suite [Suite-OpenGame (0)] -->

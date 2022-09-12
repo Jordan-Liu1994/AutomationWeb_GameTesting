@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite-OpenGame">
+	<!-- <parameter name="url" value="https://pr3l1v3.com"></parameter> -->
+	<parameter name="url"
+		value="https://new19membersite.the777888.com"></parameter>
+	<parameter name="userIDFE" value="qctestergame001"></parameter>
+	<parameter name="platformName" value="Windows WEB"></parameter>
+	<parameter name="browserName" value="Chrome"></parameter>
+	<parameter name="javaVersion" value="JDK/JRE 17"></parameter>
+	<parameter name="automationAuthor" value="Jordan"></parameter>
+	<!-- <suite-files> <suite-file path="Slots\slotsGameBBIN-testng.xml"></suite-file> 
+		<suite-file path="Slots\slotsGameCQ9-testng.xml"></suite-file> <suite-file 
+		path="Slots\slotsGameJDB-testng.xml"></suite-file> <suite-file path="Slots\slotsGameMG-testng.xml"></suite-file> 
+		<suite-file path="Slots\slotsGamePP-testng.xml"></suite-file> </suite-files> -->
+
+	<suite-files>
+		<suite-file path="Live\liveGame1-testng.xml"></suite-file>
+	</suite-files>
+
+	<!-- <suite-files> <suite-file path="Sports\sportsGame1-testng.xml"></suite-file> 
+		<suite-file path="Sports\sportsGame2-testng.xml"></suite-file> </suite-files> -->
+
+	<!-- <suite-files> <suite-file path="Poker\pokerGame1-testng.xml"></suite-file> 
+		</suite-files> -->
+
+	<!-- <suite-files> <suite-file path="Lottery\lotteryGameSGWIN-testng.xml"></suite-file> 
+		</suite-files> -->
+
+	<!-- <suite-files> <suite-file path="ESports\eSportsGameIM-testng.xml"></suite-file> 
+		</suite-files> -->
+
+	<!-- <suite-files> <suite-file path="Fish\fishGameCQ9-testng.xml"></suite-file> 
+		<suite-file path="Fish\fishGameKY-testng.xml"></suite-file> </suite-files> -->
+</suite> <!-- Suite -->

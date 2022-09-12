@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import javax.security.auth.login.FailedLoginException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,15 +16,16 @@ import utilities.VariablesStore;
 public class LoginFE extends VariablesStore {
 
 	CreateReport cR = new CreateReport();
-	
+
 	WebDriverWait wait;
 	String fail;
-	
+	String skip;
+
 	public void loginOptionButton() throws FailedLoginException {
 		fail = "loginOptionButton failed";
 
 		wait = new WebDriverWait(bDriver.getDriver(), 15);
-		WebElement loginOptionButton = bDriver.getDriver().findElement(By.id("header_login"));
+		WebElement loginOptionButton = bDriver.getDriver().findElement(By.xpath("//a[@class='login']"));
 		wait.until(ExpectedConditions.elementToBeClickable(loginOptionButton));
 		String loginOptionButtonText = loginOptionButton.getText();
 
@@ -70,25 +72,27 @@ public class LoginFE extends VariablesStore {
 
 	public void setCaptcha(String captcha) throws FailedLoginException {
 		fail = "setCaptcha failed";
+		skip = "setCaptcha skipped";
+		
+		try {
+			WebElement setCaptcha = bDriver.getDriver().findElement(By.id("captcha_code"));
+			String setCaptcha_Text = setCaptcha.getAttribute(attribute);
 
-		WebElement setCaptcha = bDriver.getDriver().findElement(By.id("captcha_code"));
-		String setCaptcha_Text = setCaptcha.getAttribute(attribute);
-
-		if (setCaptcha.isDisplayed()) {
-			setCaptcha.clear();
-			setCaptcha.sendKeys(captcha);
-			cR.getExtentTest().info(captcha + keyIn + setCaptcha_Text);
-		} else {
-			cR.getExtentTest().warning(fail);
+			if (setCaptcha.isDisplayed()) {
+				setCaptcha.clear();
+				setCaptcha.sendKeys(captcha);
+				cR.getExtentTest().info(captcha + keyIn + setCaptcha_Text);
+			}
+		} catch (NoSuchElementException e) {
+			cR.getExtentTest().skip(skip);
 		}
 	}
 
-	public void selectLoginButton() throws FailedLoginException {
-		String fail = "selectLoginButton failed";
+	public void selectLoginButton() throws FailedLoginException, InterruptedException {
+		fail = "selectLoginButton failed";
 
-		wait = new WebDriverWait(bDriver.getDriver(), 15);
 		WebElement selectLoginButton = bDriver.getDriver().findElement(By.id("login_popup_btn"));
-		wait.until(ExpectedConditions.elementToBeClickable(selectLoginButton));
+		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		String selectLoginButtonText = selectLoginButton.getText();
 
 		if (selectLoginButton.isEnabled()) {

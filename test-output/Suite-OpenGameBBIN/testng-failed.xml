@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite-OpenGameBBIN]" guice-stage="DEVELOPMENT">
+  <parameter name="automationAuthor" value="Jordan"/>
+  <parameter name="javaVersion" value="JDK/JRE 17"/>
+  <parameter name="gameVendorXpathNumber" value="17"/>
+  <parameter name="browserName" value="Chrome"/>
+  <parameter name="platformName" value="Windows WEB"/>
+  <parameter name="userIDFE" value="qctestergame001"/>
+  <parameter name="url" value="https://new19membersite.the777888.com"/>
+  <test thread-count="5" name="OpenGameBBIN(failed)">
+    <classes>
+      <class name="openLiveGame.OpenLiveGameBBIN">
+        <methods>
+          <include name="login" invocation-numbers="0"/>
+          <include name="stopDriver"/>
+          <include name="logCaseStatus"/>
+          <include name="startReportAndSetProperty"/>
+        </methods>
+      </class> <!-- openLiveGame.OpenLiveGameBBIN -->
+    </classes>
+  </test> <!-- OpenGameBBIN(failed) -->
+</suite> <!-- Failed suite [Suite-OpenGameBBIN] -->

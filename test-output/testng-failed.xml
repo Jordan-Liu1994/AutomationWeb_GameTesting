@@ -1,66 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite-OpenGame]" guice-stage="DEVELOPMENT">
-  <parameter name="vendorPokerFG" value="FG POKER INR"/>
-  <parameter name="gameNamePokerFG" value="Baccarat"/>
-  <parameter name="vendorSportsIM" value="IM SPORT INR"/>
-  <parameter name="vendorFishPP" value="PP FISH INR"/>
-  <parameter name="vendorFishMainJDB" value="JDB FISH INR"/>
-  <parameter name="gameNameFishJDB" value="Cai Shen Fishing"/>
-  <parameter name="javaVersion" value="JDK/JRE 17"/>
-  <parameter name="vendorSlotsMain" value="no"/>
-  <parameter name="vendorESportsIM" value="IM ESPORTS INR"/>
-  <parameter name="gameNameFishMT" value="Crazy Fishing"/>
-  <parameter name="vendorLiveCasinoAllbet" value="Allbet CASINO INR"/>
-  <parameter name="vendorSportsOBG" value="OBGSPORTSBOOK INR"/>
-  <parameter name="browserName" value="Chrome"/>
-  <parameter name="vendorSportsIBC" value="IBC SPORT INR"/>
-  <parameter name="vendorLiveCasinoEBET" value="EBET CASINO INR"/>
-  <parameter name="vendorLiveCasinoMaster" value="dg"/>
-  <parameter name="platformName" value="Windows WEB"/>
-  <parameter name="vendorLiveCasinoDG" value="DG CASINO INR"/>
-  <parameter name="vendorLiveCasinoBG" value="BG CASINO INR"/>
-  <parameter name="vendorLiveCasinoBBIN" value="BBIN CASINO INR"/>
-  <parameter name="vendorSportsMaster" value="IM"/>
-  <parameter name="gameNameFishPP" value="Fortune Fishing"/>
-  <parameter name="gameNameFishFG" value="Daily Fishing"/>
-  <parameter name="automationAuthor" value="Jordan"/>
-  <parameter name="gameNameSlots" value="King of Fighters"/>
-  <parameter name="vendorFishMainMT" value="MT FISH INR"/>
-  <parameter name="vendorSlots" value="HC SLOTS INR"/>
-  <parameter name="vendorFishMaster" value="FG"/>
-  <parameter name="gameNameFishBBIN" value="Rich Ocean"/>
-  <parameter name="url" value="https://pr3l1v3.com"/>
-  <parameter name="vendorSportsUG" value="UG SPORT INR"/>
-  <parameter name="vendorFishMainFG" value="FG FISH INR"/>
-  <parameter name="vendorESportsIA" value="IA ESPORTS INR"/>
-  <parameter name="vendorESportsIBC" value="IBC ESPORTS INR"/>
-  <parameter name="vendorESportsMaster" value="IBC"/>
-  <parameter name="vendorPokerMaster" value="FG"/>
-  <parameter name="gameNameSlotsMain" value="Kung Fu All Stars"/>
-  <parameter name="userIDFE" value="qctestergame001"/>
-  <parameter name="vendorLiveCasinoAG" value="AG CASINO INR"/>
-  <test thread-count="5" name="OpenGame(failed)">
-    <groups>
-      <run>
-        <exclude name="slots"/>
-        <exclude name="poker"/>
-        <exclude name="sports"/>
-        <exclude name="liveCasino"/>
-        <exclude name="eSports"/>
-      </run>
-    </groups>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="openGame.OpenFishGameTest">
+      <class name="openSportsGame.OpenSportsGame1">
         <methods>
-          <include name="switchToFishWindow"/>
-          <include name="selectGameFish" invocation-numbers="0"/>
-          <include name="fishGame"/>
           <include name="stopDriver"/>
+          <include name="selectSportsVendor"/>
           <include name="logCaseStatus"/>
           <include name="startReportAndSetProperty"/>
+          <include name="goToSite"/>
+          <include name="login"/>
+          <include name="announcement"/>
         </methods>
-      </class> <!-- openGame.OpenFishGameTest -->
+      </class> <!-- openSportsGame.OpenSportsGame1 -->
     </classes>
-  </test> <!-- OpenGame(failed) -->
-</suite> <!-- Failed suite [Suite-OpenGame] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
