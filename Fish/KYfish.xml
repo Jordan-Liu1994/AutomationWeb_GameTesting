@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite-KY">
+
+	<parameter name="KY1" value="红包捕鱼"></parameter>
+	<parameter name="KY2" value="李逵捕鱼"></parameter>
+	<parameter name="KY3" value="捕鱼传说"></parameter>
+
+	<test thread-count="5" name="KY">
+		<classes>
+			<class name="fishGame.FishKY"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

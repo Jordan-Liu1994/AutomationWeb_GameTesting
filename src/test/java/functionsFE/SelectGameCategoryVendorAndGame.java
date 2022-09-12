@@ -106,7 +106,7 @@ public class SelectGameCategoryVendorAndGame extends VariablesStore {
 		}
 	}
 	
-	public void selectGameFromFishList(String gameName1, String gameName2, String gameName3) throws FailedLoginException, InterruptedException {
+	public void selectGameFromFishList(String gameName1, String gameName2, String gameName3, int time) throws FailedLoginException, InterruptedException {
 		fail = "selectGameFromFishList failed";
 		parentWindowHandle = bDriver.getDriver().getWindowHandle();
 
@@ -129,7 +129,7 @@ public class SelectGameCategoryVendorAndGame extends VariablesStore {
 					String winHandle = iterate.next();
 					bDriver.getDriver().switchTo().window(winHandle);
 				}
-				Thread.sleep(10000);
+				Thread.sleep(time);
 				takeSS.getPassScreenShot(array);
 				cR.getExtentTest().addScreenCaptureFromPath(takeSS.screenShotPathExtent() + array + passSS, array);
 

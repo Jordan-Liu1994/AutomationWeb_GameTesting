@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-12T23:24:04 SGT" name="Suite-OpenGame" finished-at="2022-09-12T23:24:04 SGT" duration-ms="0">
+  <suite started-at="2022-09-12T23:46:26 SGT" name="Suite-OpenGame" finished-at="2022-09-12T23:46:26 SGT" duration-ms="0">
     <groups>
     </groups>
   </suite> <!-- Suite-OpenGame -->
-  <suite started-at="2022-09-12T23:23:40 SGT" name="Suite-PP" finished-at="2022-09-12T23:24:03 SGT" duration-ms="23550">
+  <suite started-at="2022-09-12T23:45:48 SGT" name="Suite-CQ9" finished-at="2022-09-12T23:46:09 SGT" duration-ms="21243">
     <groups>
-      <group name="PP">
-        <method signature="SlotsPP.announcement()[pri:1, instance:slotsGame.SlotsPP@55b7a4e0]" name="announcement" class="slotsGame.SlotsPP"/>
-        <method signature="SlotsPP.goToSite(java.lang.String)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" name="goToSite" class="slotsGame.SlotsPP"/>
-        <method signature="SlotsPP.login(java.lang.String)[pri:2, instance:slotsGame.SlotsPP@55b7a4e0]" name="login" class="slotsGame.SlotsPP"/>
-        <method signature="SlotsPP.selectSlotsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)[pri:4, instance:slotsGame.SlotsPP@55b7a4e0]" name="selectSlotsGame" class="slotsGame.SlotsPP"/>
-        <method signature="SlotsPP.selectSlotsVendor(java.lang.String)[pri:3, instance:slotsGame.SlotsPP@55b7a4e0]" name="selectSlotsVendor" class="slotsGame.SlotsPP"/>
-      </group> <!-- PP -->
+      <group name="CQ9">
+        <method signature="FishCQ9.announcement()[pri:1, instance:fishGame.FishCQ9@192d43ce]" name="announcement" class="fishGame.FishCQ9"/>
+        <method signature="FishCQ9.goToSite(java.lang.String)[pri:0, instance:fishGame.FishCQ9@192d43ce]" name="goToSite" class="fishGame.FishCQ9"/>
+        <method signature="FishCQ9.login(java.lang.String)[pri:2, instance:fishGame.FishCQ9@192d43ce]" name="login" class="fishGame.FishCQ9"/>
+        <method signature="FishCQ9.selectFishGame(java.lang.String,java.lang.String,java.lang.String,int)[pri:4, instance:fishGame.FishCQ9@192d43ce]" name="selectFishGame" class="fishGame.FishCQ9"/>
+        <method signature="FishCQ9.selectFishVendor(java.lang.String)[pri:3, instance:fishGame.FishCQ9@192d43ce]" name="selectFishVendor" class="fishGame.FishCQ9"/>
+      </group> <!-- CQ9 -->
       <group name="login">
-        <method signature="SlotsPP.login(java.lang.String)[pri:2, instance:slotsGame.SlotsPP@55b7a4e0]" name="login" class="slotsGame.SlotsPP"/>
+        <method signature="FishCQ9.login(java.lang.String)[pri:2, instance:fishGame.FishCQ9@192d43ce]" name="login" class="fishGame.FishCQ9"/>
       </group> <!-- login -->
     </groups>
-    <test started-at="2022-09-12T23:23:40 SGT" name="PP" finished-at="2022-09-12T23:24:03 SGT" duration-ms="23550">
-      <class name="slotsGame.SlotsPP">
-        <test-method is-config="true" signature="startReportAndSetProperty(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:40 SGT" name="startReportAndSetProperty" finished-at="2022-09-12T23:23:41 SGT" duration-ms="1070" status="PASS">
+    <test started-at="2022-09-12T23:45:48 SGT" name="CQ9" finished-at="2022-09-12T23:46:09 SGT" duration-ms="21243">
+      <class name="fishGame.FishCQ9">
+        <test-method is-config="true" signature="startReportAndSetProperty(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:fishGame.FishCQ9@192d43ce]" started-at="2022-09-12T23:45:48 SGT" name="startReportAndSetProperty" finished-at="2022-09-12T23:45:49 SGT" duration-ms="1088" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,7 +47,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReportAndSetProperty -->
-        <test-method signature="goToSite(java.lang.String)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:41 SGT" name="goToSite" finished-at="2022-09-12T23:23:42 SGT" duration-ms="1217" status="PASS">
+        <test-method signature="goToSite(java.lang.String)[pri:0, instance:fishGame.FishCQ9@192d43ce]" started-at="2022-09-12T23:45:49 SGT" name="goToSite" finished-at="2022-09-12T23:45:50 SGT" duration-ms="1050" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -58,22 +58,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToSite -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:42 SGT" name="logCaseStatus" finished-at="2022-09-12T23:23:42 SGT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:fishGame.FishCQ9@192d43ce]" started-at="2022-09-12T23:45:50 SGT" name="logCaseStatus" finished-at="2022-09-12T23:45:50 SGT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=goToSite status=SUCCESS method=SlotsPP.goToSite(java.lang.String)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0] output={null}]]]>
+                <![CDATA[[TestResult name=goToSite status=SUCCESS method=FishCQ9.goToSite(java.lang.String)[pri:0, instance:fishGame.FishCQ9@192d43ce] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="announcement()[pri:1, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:42 SGT" name="announcement" finished-at="2022-09-12T23:23:42 SGT" duration-ms="28" status="PASS">
+        <test-method signature="announcement()[pri:1, instance:fishGame.FishCQ9@192d43ce]" started-at="2022-09-12T23:45:50 SGT" name="announcement" finished-at="2022-09-12T23:45:50 SGT" duration-ms="27" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- announcement -->
-        <test-method signature="login(java.lang.String)[pri:2, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:42 SGT" name="login" finished-at="2022-09-12T23:23:44 SGT" duration-ms="1945" status="PASS">
+        <test-method signature="login(java.lang.String)[pri:2, instance:fishGame.FishCQ9@192d43ce]" started-at="2022-09-12T23:45:50 SGT" name="login" finished-at="2022-09-12T23:45:52 SGT" duration-ms="1941" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -84,102 +84,258 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:42 SGT" name="logCaseStatus" finished-at="2022-09-12T23:23:42 SGT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:fishGame.FishCQ9@192d43ce]" started-at="2022-09-12T23:45:50 SGT" name="logCaseStatus" finished-at="2022-09-12T23:45:50 SGT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=announcement status=SUCCESS method=SlotsPP.announcement()[pri:1, instance:slotsGame.SlotsPP@55b7a4e0] output={null}]]]>
+                <![CDATA[[TestResult name=announcement status=SUCCESS method=FishCQ9.announcement()[pri:1, instance:fishGame.FishCQ9@192d43ce] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="selectSlotsVendor(java.lang.String)[pri:3, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:44 SGT" name="selectSlotsVendor" finished-at="2022-09-12T23:23:46 SGT" duration-ms="1988" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:fishGame.FishCQ9@192d43ce]" started-at="2022-09-12T23:45:52 SGT" name="logCaseStatus" finished-at="2022-09-12T23:45:52 SGT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[PP 电子]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectSlotsVendor -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:44 SGT" name="logCaseStatus" finished-at="2022-09-12T23:23:44 SGT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=SlotsPP.login(java.lang.String)[pri:2, instance:slotsGame.SlotsPP@55b7a4e0] output={null}]]]>
+                <![CDATA[[TestResult name=login status=SUCCESS method=FishCQ9.login(java.lang.String)[pri:2, instance:fishGame.FishCQ9@192d43ce] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:46 SGT" name="logCaseStatus" finished-at="2022-09-12T23:23:46 SGT" duration-ms="1" status="PASS">
+        <test-method signature="selectFishVendor(java.lang.String)[pri:3, instance:fishGame.FishCQ9@192d43ce]" started-at="2022-09-12T23:45:52 SGT" name="selectFishVendor" finished-at="2022-09-12T23:45:54 SGT" duration-ms="1868" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=selectSlotsVendor status=SUCCESS method=SlotsPP.selectSlotsVendor(java.lang.String)[pri:3, instance:slotsGame.SlotsPP@55b7a4e0] output={null}]]]>
+                <![CDATA[CQ9 捕鱼]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectFishVendor -->
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:fishGame.FishCQ9@192d43ce]" started-at="2022-09-12T23:45:54 SGT" name="logCaseStatus" finished-at="2022-09-12T23:45:54 SGT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=selectFishVendor status=SUCCESS method=FishCQ9.selectFishVendor(java.lang.String)[pri:3, instance:fishGame.FishCQ9@192d43ce] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="selectSlotsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)[pri:4, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:46 SGT" name="selectSlotsGame" finished-at="2022-09-12T23:24:02 SGT" duration-ms="15956" status="PASS">
+        <test-method signature="selectFishGame(java.lang.String,java.lang.String,java.lang.String,int)[pri:4, instance:fishGame.FishCQ9@192d43ce]" started-at="2022-09-12T23:45:54 SGT" name="selectFishGame" finished-at="2022-09-12T23:46:08 SGT" duration-ms="13934" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[星光公主]]>
+                <![CDATA[一炮捕鱼]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[现金升降机]]>
+                <![CDATA[皇金渔场]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[大鱼奇缘]]>
+                <![CDATA[英雄捕鱼]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[黄金叛变]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[武松打虎]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[500]]>
+                <![CDATA[1000]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectSlotsGame -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:24:02 SGT" name="logCaseStatus" finished-at="2022-09-12T23:24:02 SGT" duration-ms="1" status="PASS">
+        </test-method> <!-- selectFishGame -->
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:fishGame.FishCQ9@192d43ce]" started-at="2022-09-12T23:46:08 SGT" name="logCaseStatus" finished-at="2022-09-12T23:46:08 SGT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=selectSlotsGame status=SUCCESS method=SlotsPP.selectSlotsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)[pri:4, instance:slotsGame.SlotsPP@55b7a4e0] output={null}]]]>
+                <![CDATA[[TestResult name=selectFishGame status=SUCCESS method=FishCQ9.selectFishGame(java.lang.String,java.lang.String,java.lang.String,int)[pri:4, instance:fishGame.FishCQ9@192d43ce] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method is-config="true" signature="stopDriver()[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:24:02 SGT" name="stopDriver" finished-at="2022-09-12T23:24:03 SGT" duration-ms="1318" status="PASS">
+        <test-method is-config="true" signature="stopDriver()[pri:0, instance:fishGame.FishCQ9@192d43ce]" started-at="2022-09-12T23:46:08 SGT" name="stopDriver" finished-at="2022-09-12T23:46:09 SGT" duration-ms="1305" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopDriver -->
-      </class> <!-- slotsGame.SlotsPP -->
-    </test> <!-- PP -->
-  </suite> <!-- Suite-PP -->
+      </class> <!-- fishGame.FishCQ9 -->
+    </test> <!-- CQ9 -->
+  </suite> <!-- Suite-CQ9 -->
+  <suite started-at="2022-09-12T23:46:09 SGT" name="Suite-KY" finished-at="2022-09-12T23:46:26 SGT" duration-ms="16634">
+    <groups>
+      <group name="login">
+        <method signature="FishKY.login(java.lang.String)[pri:2, instance:fishGame.FishKY@37afeb11]" name="login" class="fishGame.FishKY"/>
+      </group> <!-- login -->
+      <group name="KY">
+        <method signature="FishKY.announcement()[pri:1, instance:fishGame.FishKY@37afeb11]" name="announcement" class="fishGame.FishKY"/>
+        <method signature="FishKY.goToSite(java.lang.String)[pri:0, instance:fishGame.FishKY@37afeb11]" name="goToSite" class="fishGame.FishKY"/>
+        <method signature="FishKY.login(java.lang.String)[pri:2, instance:fishGame.FishKY@37afeb11]" name="login" class="fishGame.FishKY"/>
+        <method signature="FishKY.selectFishGame(java.lang.String,java.lang.String,java.lang.String,int)[pri:4, instance:fishGame.FishKY@37afeb11]" name="selectFishGame" class="fishGame.FishKY"/>
+        <method signature="FishKY.selectFishVendor(java.lang.String)[pri:3, instance:fishGame.FishKY@37afeb11]" name="selectFishVendor" class="fishGame.FishKY"/>
+      </group> <!-- KY -->
+    </groups>
+    <test started-at="2022-09-12T23:46:09 SGT" name="KY" finished-at="2022-09-12T23:46:26 SGT" duration-ms="16634">
+      <class name="fishGame.FishKY">
+        <test-method is-config="true" signature="startReportAndSetProperty(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:fishGame.FishKY@37afeb11]" started-at="2022-09-12T23:46:09 SGT" name="startReportAndSetProperty" finished-at="2022-09-12T23:46:10 SGT" duration-ms="653" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows WEB]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[JDK/JRE 17]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Jordan]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReportAndSetProperty -->
+        <test-method signature="goToSite(java.lang.String)[pri:0, instance:fishGame.FishKY@37afeb11]" started-at="2022-09-12T23:46:10 SGT" name="goToSite" finished-at="2022-09-12T23:46:11 SGT" duration-ms="1015" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://new19membersite.the777888.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToSite -->
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:fishGame.FishKY@37afeb11]" started-at="2022-09-12T23:46:11 SGT" name="logCaseStatus" finished-at="2022-09-12T23:46:11 SGT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=goToSite status=SUCCESS method=FishKY.goToSite(java.lang.String)[pri:0, instance:fishGame.FishKY@37afeb11] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logCaseStatus -->
+        <test-method signature="announcement()[pri:1, instance:fishGame.FishKY@37afeb11]" started-at="2022-09-12T23:46:11 SGT" name="announcement" finished-at="2022-09-12T23:46:11 SGT" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- announcement -->
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:fishGame.FishKY@37afeb11]" started-at="2022-09-12T23:46:11 SGT" name="logCaseStatus" finished-at="2022-09-12T23:46:11 SGT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=announcement status=SUCCESS method=FishKY.announcement()[pri:1, instance:fishGame.FishKY@37afeb11] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logCaseStatus -->
+        <test-method signature="login(java.lang.String)[pri:2, instance:fishGame.FishKY@37afeb11]" started-at="2022-09-12T23:46:11 SGT" name="login" finished-at="2022-09-12T23:46:13 SGT" duration-ms="2366" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[qctestergame001]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:fishGame.FishKY@37afeb11]" started-at="2022-09-12T23:46:13 SGT" name="logCaseStatus" finished-at="2022-09-12T23:46:13 SGT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=FishKY.login(java.lang.String)[pri:2, instance:fishGame.FishKY@37afeb11] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logCaseStatus -->
+        <test-method signature="selectFishVendor(java.lang.String)[pri:3, instance:fishGame.FishKY@37afeb11]" started-at="2022-09-12T23:46:13 SGT" name="selectFishVendor" finished-at="2022-09-12T23:46:15 SGT" duration-ms="1859" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[KY 捕鱼]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectFishVendor -->
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:fishGame.FishKY@37afeb11]" started-at="2022-09-12T23:46:15 SGT" name="logCaseStatus" finished-at="2022-09-12T23:46:15 SGT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=selectFishVendor status=SUCCESS method=FishKY.selectFishVendor(java.lang.String)[pri:3, instance:fishGame.FishKY@37afeb11] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logCaseStatus -->
+        <test-method signature="selectFishGame(java.lang.String,java.lang.String,java.lang.String,int)[pri:4, instance:fishGame.FishKY@37afeb11]" started-at="2022-09-12T23:46:15 SGT" name="selectFishGame" finished-at="2022-09-12T23:46:25 SGT" duration-ms="9560" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[红包捕鱼]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[李逵捕鱼]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[捕鱼传说]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectFishGame -->
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:fishGame.FishKY@37afeb11]" started-at="2022-09-12T23:46:25 SGT" name="logCaseStatus" finished-at="2022-09-12T23:46:25 SGT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=selectFishGame status=SUCCESS method=FishKY.selectFishGame(java.lang.String,java.lang.String,java.lang.String,int)[pri:4, instance:fishGame.FishKY@37afeb11] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logCaseStatus -->
+        <test-method is-config="true" signature="stopDriver()[pri:0, instance:fishGame.FishKY@37afeb11]" started-at="2022-09-12T23:46:25 SGT" name="stopDriver" finished-at="2022-09-12T23:46:26 SGT" duration-ms="1155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopDriver -->
+      </class> <!-- fishGame.FishKY -->
+    </test> <!-- KY -->
+  </suite> <!-- Suite-KY -->
 </testng-results>

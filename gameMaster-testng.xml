@@ -9,21 +9,28 @@
 	<parameter name="javaVersion" value="JDK/JRE 17"></parameter>
 	<parameter name="automationAuthor" value="Jordan"></parameter>
 
+<!-- controls time to open slots/fish game -->
+	<parameter name="time" value="1000"></parameter>
+
 	<!-- only edit the value of the vendor names -->
 	<parameter name="vendorBBIN" value="BBIN 电子"></parameter>
 	<parameter name="vendorCQ9" value="CQ9 电子"></parameter>
 	<parameter name="vendorJDB" value="JDB 电子"></parameter>
 	<parameter name="vendorMG" value="MG 电子"></parameter>
 	<parameter name="vendorPP" value="PP 电子"></parameter>
-	
-	<!-- controls time to open slots game -->
-	<parameter name="time" value="1000"></parameter>
-
 	<suite-files>
 		<!--<suite-file path="Slots\BBINslot.xml"></suite-file>
 		<suite-file path="Slots\CQ9slot.xml"></suite-file> 
 		<suite-file path="Slots\JDBslot.xml"></suite-file>
-		<suite-file path="Slots\MGslot.xml"></suite-file>-->
-		<suite-file path="Slots\PPslot.xml"></suite-file>
+		<suite-file path="Slots\MGslot.xml"></suite-file>
+		<suite-file path="Slots\PPslot.xml"></suite-file>-->
+	</suite-files>
+	
+	<!-- only edit the value of the vendor names -->
+	<parameter name="fishVendorKY" value="KY 捕鱼"></parameter>
+	<parameter name="fishVendorCQ9" value="CQ9 捕鱼"></parameter>
+	<suite-files>
+		<suite-file path="Fish\CQ9fish.xml"></suite-file>
+		<suite-file path="Fish\KYfish.xml"></suite-file>
 	</suite-files>
 </suite>
