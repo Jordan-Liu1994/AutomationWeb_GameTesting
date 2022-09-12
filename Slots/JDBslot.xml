@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite-JDB">
+
+	<parameter name="gameVendorXpathNumber" value="35"></parameter>
+	<parameter name="JDB1" value="后羿传"></parameter>
+	<parameter name="JDB2" value="招财狮"></parameter>
+	<parameter name="JDB3" value="水晶王国"></parameter>
+	<parameter name="JDB4" value="麻雀无双"></parameter>
+	<parameter name="JDB5" value="神偷妙贼"></parameter>
+
+	<test thread-count="5" name="JDB">
+		<classes>
+			<class name="slotsGame.SlotsJDB"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite-slotsGame (0)]" guice-stage="DEVELOPMENT">
+  <parameter name="automationAuthor" value="Jordan"/>
+  <parameter name="gameVendorName" value="CQ9 电子"/>
+  <parameter name="CQ95" value="火神"/>
+  <parameter name="CQ94" value="飞天财神"/>
+  <parameter name="javaVersion" value="JDK/JRE 17"/>
+  <parameter name="CQ93" value="跳起来2"/>
+  <parameter name="CQ92" value="蹦迪"/>
+  <parameter name="CQ91" value="跳起来"/>
+  <parameter name="browserName" value="Chrome"/>
+  <parameter name="platformName" value="Windows WEB"/>
+  <parameter name="userIDFE" value="qctestergame001"/>
+  <parameter name="url" value="https://new19membersite.the777888.com"/>
+  <test thread-count="5" name="slotsGame(failed)">
+    <classes>
+      <class name="slotsGame.SlotsCQ9">
+        <methods>
+          <include name="startReportAndSetProperty"/>
+          <include name="logCaseStatus"/>
+          <include name="stopDriver"/>
+          <include name="selectSlotsGame" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- slotsGame.SlotsCQ9 -->
+    </classes>
+  </test> <!-- slotsGame(failed) -->
+</suite> <!-- Failed suite [Suite-slotsGame (0)] -->

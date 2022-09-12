@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-12T17:41:48 SGT" name="Suite-OpenPokerGame" finished-at="2022-09-12T17:42:30 SGT" duration-ms="42414">
+  <suite started-at="2022-09-12T23:12:57 SGT" name="Suite-OpenGame" finished-at="2022-09-12T23:12:57 SGT" duration-ms="0">
     <groups>
-      <group name="Poker">
-        <method signature="OpenPokerGame1.announcement()[pri:1, instance:openPokerGame.OpenPokerGame1@6eda5c9]" name="announcement" class="openPokerGame.OpenPokerGame1"/>
-        <method signature="OpenPokerGame1.goToSite(java.lang.String)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" name="goToSite" class="openPokerGame.OpenPokerGame1"/>
-        <method signature="OpenPokerGame1.login(java.lang.String)[pri:2, instance:openPokerGame.OpenPokerGame1@6eda5c9]" name="login" class="openPokerGame.OpenPokerGame1"/>
-        <method signature="OpenPokerGame1.selectSlotsVendor(java.lang.String)[pri:3, instance:openPokerGame.OpenPokerGame1@6eda5c9]" name="selectSlotsVendor" class="openPokerGame.OpenPokerGame1"/>
-      </group> <!-- Poker -->
+    </groups>
+  </suite> <!-- Suite-OpenGame -->
+  <suite started-at="2022-09-12T23:12:27 SGT" name="Suite-PP" finished-at="2022-09-12T23:12:57 SGT" duration-ms="30102">
+    <groups>
+      <group name="PP">
+        <method signature="SlotsPP.announcement()[pri:1, instance:slotsGame.SlotsPP@55b7a4e0]" name="announcement" class="slotsGame.SlotsPP"/>
+        <method signature="SlotsPP.goToSite(java.lang.String)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" name="goToSite" class="slotsGame.SlotsPP"/>
+        <method signature="SlotsPP.login(java.lang.String)[pri:2, instance:slotsGame.SlotsPP@55b7a4e0]" name="login" class="slotsGame.SlotsPP"/>
+        <method signature="SlotsPP.selectSlotsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:slotsGame.SlotsPP@55b7a4e0]" name="selectSlotsGame" class="slotsGame.SlotsPP"/>
+        <method signature="SlotsPP.selectSlotsVendor(java.lang.String)[pri:3, instance:slotsGame.SlotsPP@55b7a4e0]" name="selectSlotsVendor" class="slotsGame.SlotsPP"/>
+      </group> <!-- PP -->
       <group name="login">
-        <method signature="OpenPokerGame1.login(java.lang.String)[pri:2, instance:openPokerGame.OpenPokerGame1@6eda5c9]" name="login" class="openPokerGame.OpenPokerGame1"/>
+        <method signature="SlotsPP.login(java.lang.String)[pri:2, instance:slotsGame.SlotsPP@55b7a4e0]" name="login" class="slotsGame.SlotsPP"/>
       </group> <!-- login -->
     </groups>
-    <test started-at="2022-09-12T17:41:48 SGT" name="OpenPokerGame" finished-at="2022-09-12T17:42:30 SGT" duration-ms="42414">
-      <class name="openPokerGame.OpenPokerGame1">
-        <test-method is-config="true" signature="startReportAndSetProperty(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:48 SGT" name="startReportAndSetProperty" finished-at="2022-09-12T17:41:49 SGT" duration-ms="1503" status="PASS">
+    <test started-at="2022-09-12T23:12:27 SGT" name="PP" finished-at="2022-09-12T23:12:57 SGT" duration-ms="30102">
+      <class name="slotsGame.SlotsPP">
+        <test-method is-config="true" signature="startReportAndSetProperty(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:27 SGT" name="startReportAndSetProperty" finished-at="2022-09-12T23:12:28 SGT" duration-ms="1086" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -42,7 +47,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReportAndSetProperty -->
-        <test-method signature="goToSite(java.lang.String)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:49 SGT" name="goToSite" finished-at="2022-09-12T17:41:53 SGT" duration-ms="3394" status="PASS">
+        <test-method signature="goToSite(java.lang.String)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:28 SGT" name="goToSite" finished-at="2022-09-12T23:12:29 SGT" duration-ms="1140" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,33 +58,33 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToSite -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:53 SGT" name="logCaseStatus" finished-at="2022-09-12T17:41:53 SGT" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:29 SGT" name="logCaseStatus" finished-at="2022-09-12T23:12:29 SGT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=goToSite status=SUCCESS method=OpenPokerGame1.goToSite(java.lang.String)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9] output={null}]]]>
+                <![CDATA[[TestResult name=goToSite status=SUCCESS method=SlotsPP.goToSite(java.lang.String)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="announcement()[pri:1, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:53 SGT" name="announcement" finished-at="2022-09-12T17:41:53 SGT" duration-ms="51" status="PASS">
+        <test-method signature="announcement()[pri:1, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:29 SGT" name="announcement" finished-at="2022-09-12T23:12:29 SGT" duration-ms="26" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- announcement -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:53 SGT" name="logCaseStatus" finished-at="2022-09-12T17:41:53 SGT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:29 SGT" name="logCaseStatus" finished-at="2022-09-12T23:12:29 SGT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=announcement status=SUCCESS method=OpenPokerGame1.announcement()[pri:1, instance:openPokerGame.OpenPokerGame1@6eda5c9] output={null}]]]>
+                <![CDATA[[TestResult name=announcement status=SUCCESS method=SlotsPP.announcement()[pri:1, instance:slotsGame.SlotsPP@55b7a4e0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="login(java.lang.String)[pri:2, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:53 SGT" name="login" finished-at="2022-09-12T17:41:56 SGT" duration-ms="3492" status="PASS">
+        <test-method signature="login(java.lang.String)[pri:2, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:29 SGT" name="login" finished-at="2022-09-12T23:12:31 SGT" duration-ms="1925" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -90,48 +95,86 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:56 SGT" name="logCaseStatus" finished-at="2022-09-12T17:41:56 SGT" duration-ms="0" status="PASS">
+        <test-method signature="selectSlotsVendor(java.lang.String)[pri:3, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:31 SGT" name="selectSlotsVendor" finished-at="2022-09-12T23:12:33 SGT" duration-ms="1959" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=OpenPokerGame1.login(java.lang.String)[pri:2, instance:openPokerGame.OpenPokerGame1@6eda5c9] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logCaseStatus -->
-        <test-method signature="selectSlotsVendor(java.lang.String)[pri:3, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:41:56 SGT" name="selectSlotsVendor" finished-at="2022-09-12T17:42:29 SGT" duration-ms="32217" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[86]]>
+                <![CDATA[PP 电子]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectSlotsVendor -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:42:29 SGT" name="logCaseStatus" finished-at="2022-09-12T17:42:29 SGT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:31 SGT" name="logCaseStatus" finished-at="2022-09-12T23:12:31 SGT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=selectSlotsVendor status=SUCCESS method=OpenPokerGame1.selectSlotsVendor(java.lang.String)[pri:3, instance:openPokerGame.OpenPokerGame1@6eda5c9] output={null}]]]>
+                <![CDATA[[TestResult name=login status=SUCCESS method=SlotsPP.login(java.lang.String)[pri:2, instance:slotsGame.SlotsPP@55b7a4e0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method is-config="true" signature="stopDriver()[pri:0, instance:openPokerGame.OpenPokerGame1@6eda5c9]" started-at="2022-09-12T17:42:29 SGT" name="stopDriver" finished-at="2022-09-12T17:42:30 SGT" duration-ms="1714" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:33 SGT" name="logCaseStatus" finished-at="2022-09-12T23:12:33 SGT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=selectSlotsVendor status=SUCCESS method=SlotsPP.selectSlotsVendor(java.lang.String)[pri:3, instance:slotsGame.SlotsPP@55b7a4e0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logCaseStatus -->
+        <test-method signature="selectSlotsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:33 SGT" name="selectSlotsGame" finished-at="2022-09-12T23:12:56 SGT" duration-ms="22616" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[星光公主]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[现金升降机]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[大鱼奇缘]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[黄金叛变]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[武松打虎]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectSlotsGame -->
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:56 SGT" name="logCaseStatus" finished-at="2022-09-12T23:12:56 SGT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=selectSlotsGame status=SUCCESS method=SlotsPP.selectSlotsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:slotsGame.SlotsPP@55b7a4e0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logCaseStatus -->
+        <test-method is-config="true" signature="stopDriver()[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:56 SGT" name="stopDriver" finished-at="2022-09-12T23:12:57 SGT" duration-ms="1323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopDriver -->
-      </class> <!-- openPokerGame.OpenPokerGame1 -->
-    </test> <!-- OpenPokerGame -->
-  </suite> <!-- Suite-OpenPokerGame -->
-  <suite started-at="2022-09-12T17:42:30 SGT" name="Suite-OpenGame" finished-at="2022-09-12T17:42:30 SGT" duration-ms="0">
-    <groups>
-    </groups>
-  </suite> <!-- Suite-OpenGame -->
+      </class> <!-- slotsGame.SlotsPP -->
+    </test> <!-- PP -->
+  </suite> <!-- Suite-PP -->
 </testng-results>

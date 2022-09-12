@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite-PP">
+
+	<parameter name="PP1" value="星光公主"></parameter>
+	<parameter name="PP2" value="现金升降机"></parameter>
+	<parameter name="PP3" value="大鱼奇缘"></parameter>
+	<parameter name="PP4" value="黄金叛变"></parameter>
+	<parameter name="PP5" value="武松打虎"></parameter>
+
+	<test thread-count="5" name="PP">
+		<classes>
+			<class name="slotsGame.SlotsPP"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

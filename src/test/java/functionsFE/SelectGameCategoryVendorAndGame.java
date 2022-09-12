@@ -27,7 +27,7 @@ public class SelectGameCategoryVendorAndGame extends VariablesStore {
 	String parentWindowHandle;
 	Set<String> nextWindowHandle;
 
-	public void hoverGameCategory(String categoryXpathNumber) throws FailedLoginException {
+	public void hoverGameCategory(String categoryXpathNumber) throws FailedLoginException, InterruptedException {
 		fail = "hoverGameCategory failed";
 		String hoverGameCategoryText;
 
@@ -41,6 +41,7 @@ public class SelectGameCategoryVendorAndGame extends VariablesStore {
 
 		if (hoverGameCategory.isDisplayed()) {
 			cR.getExtentTest().info("Hovered over " + hoverGameCategoryText);
+			Thread.sleep(500);
 		} else {
 			cR.getExtentTest().fail(fail);
 			throw new FailedLoginException(fail);
@@ -48,20 +49,20 @@ public class SelectGameCategoryVendorAndGame extends VariablesStore {
 	}
 
 	String selectGameVendorText;
-	
-	public void selectGameVendor(String gameVendorXpathNumber) throws FailedLoginException, InterruptedException {
+
+	public void selectGameVendor(String gameVendorName) throws FailedLoginException, InterruptedException {
 		fail = "selectGameVendor failed";
 		parentWindowHandle = bDriver.getDriver().getWindowHandle();
 
 		wait = new WebDriverWait(bDriver.getDriver(), 15);
-		WebElement selectGameVendor = bDriver.getDriver().findElement(By.xpath("(//div)[" + gameVendorXpathNumber + "]"));
-		wait.until(ExpectedConditions.visibilityOf(selectGameVendor));
+		WebElement selectGameVendor = bDriver.getDriver().findElement(By.xpath("//div[contains(text(),'" + gameVendorName + "')]"));
 		wait.until(ExpectedConditions.elementToBeClickable(selectGameVendor));
 		selectGameVendorText = selectGameVendor.getText();
 
 		if (selectGameVendor.isDisplayed()) {
 			selectGameVendor.click();
 			cR.getExtentTest().info("Clicked " + selectGameVendorText);
+			Thread.sleep(500);
 		} else {
 			cR.getExtentTest().fail(fail);
 		}
@@ -80,7 +81,7 @@ public class SelectGameCategoryVendorAndGame extends VariablesStore {
 		takeSS.getPassScreenShot(selectGameVendorText);
 		cR.getExtentTest().addScreenCaptureFromPath(takeSS.screenShotPathExtent() + selectGameVendorText + passSS, selectGameVendorText);
 	}
-	
+
 	public void selectGameFromSlotsList(String gameName1, String gameName2, String gameName3, String gameName4, String gameName5) throws FailedLoginException, InterruptedException {
 		fail = "selectGameFromSlotsList failed";
 		parentWindowHandle = bDriver.getDriver().getWindowHandle();
@@ -94,7 +95,7 @@ public class SelectGameCategoryVendorAndGame extends VariablesStore {
 
 		for (int i = 0; i <= 4; i++) {
 			String array = arraylist.get(i);
-			WebElement selectGameFromSlotsList = bDriver.getDriver().findElement(By.xpath("(//div[contains(text(),'" + array + "')])[1]"));
+			WebElement selectGameFromSlotsList = bDriver.getDriver().findElement(By.xpath("//div[contains(text(),'" + array + "')]"));
 			if (selectGameFromSlotsList.isDisplayed()) {
 				selectGameFromSlotsList.click();
 				cR.getExtentTest().info("Clicked " + array);
@@ -105,8 +106,9 @@ public class SelectGameCategoryVendorAndGame extends VariablesStore {
 				while (iterate.hasNext()) {
 					String winHandle = iterate.next();
 					bDriver.getDriver().switchTo().window(winHandle);
+					bDriver.getDriver().manage().window().maximize();
 				}
-				Thread.sleep(10000);
+				Thread.sleep(1000);
 				takeSS.getPassScreenShot(array);
 				cR.getExtentTest().addScreenCaptureFromPath(takeSS.screenShotPathExtent() + array + passSS, array);
 

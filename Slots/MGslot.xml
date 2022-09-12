@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite-MG">
+
+	<parameter name="MG1" value="不朽情缘"></parameter>
+	<parameter name="MG2" value="阿瓦隆"></parameter>
+	<parameter name="MG3" value="篮球巨星"></parameter>
+	<parameter name="MG4" value="美丽骷髅"></parameter>
+	<parameter name="MG5" value="百万人鱼"></parameter>
+
+	<test thread-count="5" name="MG">
+		<classes>
+			<class name="slotsGame.SlotsMG"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

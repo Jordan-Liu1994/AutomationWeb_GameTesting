@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite-BBIN">
+
+	<parameter name="BBIN1" value="糖果派对"></parameter>
+	<parameter name="BBIN2" value="惑星战记"></parameter>
+	<parameter name="BBIN3" value="外星战记"></parameter>
+	<parameter name="BBIN4" value="外星争霸"></parameter>
+	<parameter name="BBIN5" value="传统"></parameter>
+
+	<test thread-count="5" name="BBIN">
+		<classes>
+			<class name="slotsGame.SlotsBBIN"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite-CQ9">
+
+	<parameter name="CQ91" value="跳起来"></parameter>
+	<parameter name="CQ92" value="蹦迪"></parameter>
+	<parameter name="CQ93" value="跳起来2"></parameter>
+	<parameter name="CQ94" value="飞天财神"></parameter>
+	<parameter name="CQ95" value="火神"></parameter>
+
+	<test thread-count="5" name="CQ9">
+		<classes>
+			<class name="slotsGame.SlotsCQ9"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
