@@ -73,10 +73,10 @@ public class SlotsCQ9 extends VariablesStore {
 	}
 
 	@Test(priority = 4, groups = { "CQ9" })
-	@Parameters({ "CQ91", "CQ92", "CQ93", "CQ94", "CQ95" })
-	public void selectSlotsGame(String CQ91, String CQ92, String CQ93, String CQ94, String CQ95) throws FailedLoginException, InterruptedException {
+	@Parameters({ "CQ91", "CQ92", "CQ93", "CQ94", "CQ95", "time" })
+	public void selectSlotsGame(String CQ91, String CQ92, String CQ93, String CQ94, String CQ95, int time) throws FailedLoginException, InterruptedException {
 		cR.createTest("selectSlotsGame");
-		sGCVAG.selectGameFromSlotsList(CQ91, CQ92, CQ93, CQ94, CQ95);
+		sGCVAG.selectGameFromSlotsList(CQ91, CQ92, CQ93, CQ94, CQ95, time);
 	}
 
 	@AfterMethod(groups = { "CQ9" })

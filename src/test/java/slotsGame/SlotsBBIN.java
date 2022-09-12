@@ -73,10 +73,10 @@ public class SlotsBBIN extends VariablesStore {
 	}
 
 	@Test(priority = 4, groups = { "BBIN" })
-	@Parameters({ "BBIN1", "BBIN2", "BBIN3", "BBIN4", "BBIN5" })
-	public void selectSlotsGame(String BBIN1, String BBIN2, String BBIN3, String BBIN4, String BBIN5) throws FailedLoginException, InterruptedException {
+	@Parameters({ "BBIN1", "BBIN2", "BBIN3", "BBIN4", "BBIN5", "time" })
+	public void selectSlotsGame(String BBIN1, String BBIN2, String BBIN3, String BBIN4, String BBIN5, int time) throws FailedLoginException, InterruptedException {
 		cR.createTest("selectSlotsGame");
-		sGCVAG.selectGameFromSlotsList(BBIN1, BBIN2, BBIN3, BBIN4, BBIN5);
+		sGCVAG.selectGameFromSlotsList(BBIN1, BBIN2, BBIN3, BBIN4, BBIN5, time);
 	}
 
 	@AfterMethod(groups = { "BBIN" })

@@ -73,10 +73,10 @@ public class SlotsPP extends VariablesStore {
 	}
 
 	@Test(priority = 4, groups = { "PP" })
-	@Parameters({ "PP1", "PP2", "PP3", "PP4", "PP5" })
-	public void selectSlotsGame(String PP1, String PP2, String PP3, String PP4, String PP5) throws FailedLoginException, InterruptedException {
+	@Parameters({ "PP1", "PP2", "PP3", "PP4", "PP5", "time" })
+	public void selectSlotsGame(String PP1, String PP2, String PP3, String PP4, String PP5, int time) throws FailedLoginException, InterruptedException {
 		cR.createTest("selectSlotsGame");
-		sGCVAG.selectGameFromSlotsList(PP1, PP2, PP3, PP4, PP5);
+		sGCVAG.selectGameFromSlotsList(PP1, PP2, PP3, PP4, PP5, time);
 	}
 
 	@AfterMethod(groups = { "PP" })

@@ -15,6 +15,9 @@
 	<parameter name="vendorJDB" value="JDB 电子"></parameter>
 	<parameter name="vendorMG" value="MG 电子"></parameter>
 	<parameter name="vendorPP" value="PP 电子"></parameter>
+	
+	<!-- controls time to open slots game -->
+	<parameter name="time" value="1000"></parameter>
 
 	<suite-files>
 		<!--<suite-file path="Slots\BBINslot.xml"></suite-file>

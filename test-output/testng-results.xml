@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-12T23:12:57 SGT" name="Suite-OpenGame" finished-at="2022-09-12T23:12:57 SGT" duration-ms="0">
+  <suite started-at="2022-09-12T23:24:04 SGT" name="Suite-OpenGame" finished-at="2022-09-12T23:24:04 SGT" duration-ms="0">
     <groups>
     </groups>
   </suite> <!-- Suite-OpenGame -->
-  <suite started-at="2022-09-12T23:12:27 SGT" name="Suite-PP" finished-at="2022-09-12T23:12:57 SGT" duration-ms="30102">
+  <suite started-at="2022-09-12T23:23:40 SGT" name="Suite-PP" finished-at="2022-09-12T23:24:03 SGT" duration-ms="23550">
     <groups>
       <group name="PP">
         <method signature="SlotsPP.announcement()[pri:1, instance:slotsGame.SlotsPP@55b7a4e0]" name="announcement" class="slotsGame.SlotsPP"/>
         <method signature="SlotsPP.goToSite(java.lang.String)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" name="goToSite" class="slotsGame.SlotsPP"/>
         <method signature="SlotsPP.login(java.lang.String)[pri:2, instance:slotsGame.SlotsPP@55b7a4e0]" name="login" class="slotsGame.SlotsPP"/>
-        <method signature="SlotsPP.selectSlotsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:slotsGame.SlotsPP@55b7a4e0]" name="selectSlotsGame" class="slotsGame.SlotsPP"/>
+        <method signature="SlotsPP.selectSlotsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)[pri:4, instance:slotsGame.SlotsPP@55b7a4e0]" name="selectSlotsGame" class="slotsGame.SlotsPP"/>
         <method signature="SlotsPP.selectSlotsVendor(java.lang.String)[pri:3, instance:slotsGame.SlotsPP@55b7a4e0]" name="selectSlotsVendor" class="slotsGame.SlotsPP"/>
       </group> <!-- PP -->
       <group name="login">
         <method signature="SlotsPP.login(java.lang.String)[pri:2, instance:slotsGame.SlotsPP@55b7a4e0]" name="login" class="slotsGame.SlotsPP"/>
       </group> <!-- login -->
     </groups>
-    <test started-at="2022-09-12T23:12:27 SGT" name="PP" finished-at="2022-09-12T23:12:57 SGT" duration-ms="30102">
+    <test started-at="2022-09-12T23:23:40 SGT" name="PP" finished-at="2022-09-12T23:24:03 SGT" duration-ms="23550">
       <class name="slotsGame.SlotsPP">
-        <test-method is-config="true" signature="startReportAndSetProperty(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:27 SGT" name="startReportAndSetProperty" finished-at="2022-09-12T23:12:28 SGT" duration-ms="1086" status="PASS">
+        <test-method is-config="true" signature="startReportAndSetProperty(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:40 SGT" name="startReportAndSetProperty" finished-at="2022-09-12T23:23:41 SGT" duration-ms="1070" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,7 +47,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReportAndSetProperty -->
-        <test-method signature="goToSite(java.lang.String)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:28 SGT" name="goToSite" finished-at="2022-09-12T23:12:29 SGT" duration-ms="1140" status="PASS">
+        <test-method signature="goToSite(java.lang.String)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:41 SGT" name="goToSite" finished-at="2022-09-12T23:23:42 SGT" duration-ms="1217" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -58,7 +58,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToSite -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:29 SGT" name="logCaseStatus" finished-at="2022-09-12T23:12:29 SGT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:42 SGT" name="logCaseStatus" finished-at="2022-09-12T23:23:42 SGT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,22 +69,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="announcement()[pri:1, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:29 SGT" name="announcement" finished-at="2022-09-12T23:12:29 SGT" duration-ms="26" status="PASS">
+        <test-method signature="announcement()[pri:1, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:42 SGT" name="announcement" finished-at="2022-09-12T23:23:42 SGT" duration-ms="28" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- announcement -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:29 SGT" name="logCaseStatus" finished-at="2022-09-12T23:12:29 SGT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=announcement status=SUCCESS method=SlotsPP.announcement()[pri:1, instance:slotsGame.SlotsPP@55b7a4e0] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logCaseStatus -->
-        <test-method signature="login(java.lang.String)[pri:2, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:29 SGT" name="login" finished-at="2022-09-12T23:12:31 SGT" duration-ms="1925" status="PASS">
+        <test-method signature="login(java.lang.String)[pri:2, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:42 SGT" name="login" finished-at="2022-09-12T23:23:44 SGT" duration-ms="1945" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -95,7 +84,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="selectSlotsVendor(java.lang.String)[pri:3, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:31 SGT" name="selectSlotsVendor" finished-at="2022-09-12T23:12:33 SGT" duration-ms="1959" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:42 SGT" name="logCaseStatus" finished-at="2022-09-12T23:23:42 SGT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=announcement status=SUCCESS method=SlotsPP.announcement()[pri:1, instance:slotsGame.SlotsPP@55b7a4e0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logCaseStatus -->
+        <test-method signature="selectSlotsVendor(java.lang.String)[pri:3, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:44 SGT" name="selectSlotsVendor" finished-at="2022-09-12T23:23:46 SGT" duration-ms="1988" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -106,7 +106,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectSlotsVendor -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:31 SGT" name="logCaseStatus" finished-at="2022-09-12T23:12:31 SGT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:44 SGT" name="logCaseStatus" finished-at="2022-09-12T23:23:44 SGT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -117,7 +117,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:33 SGT" name="logCaseStatus" finished-at="2022-09-12T23:12:33 SGT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:46 SGT" name="logCaseStatus" finished-at="2022-09-12T23:23:46 SGT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -128,7 +128,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="selectSlotsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:33 SGT" name="selectSlotsGame" finished-at="2022-09-12T23:12:56 SGT" duration-ms="22616" status="PASS">
+        <test-method signature="selectSlotsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)[pri:4, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:23:46 SGT" name="selectSlotsGame" finished-at="2022-09-12T23:24:02 SGT" duration-ms="15956" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -155,22 +155,27 @@
                 <![CDATA[武松打虎]]>
               </value>
             </param>
+            <param index="5">
+              <value>
+                <![CDATA[500]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectSlotsGame -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:56 SGT" name="logCaseStatus" finished-at="2022-09-12T23:12:56 SGT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:24:02 SGT" name="logCaseStatus" finished-at="2022-09-12T23:24:02 SGT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=selectSlotsGame status=SUCCESS method=SlotsPP.selectSlotsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:slotsGame.SlotsPP@55b7a4e0] output={null}]]]>
+                <![CDATA[[TestResult name=selectSlotsGame status=SUCCESS method=SlotsPP.selectSlotsGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)[pri:4, instance:slotsGame.SlotsPP@55b7a4e0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method is-config="true" signature="stopDriver()[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:12:56 SGT" name="stopDriver" finished-at="2022-09-12T23:12:57 SGT" duration-ms="1323" status="PASS">
+        <test-method is-config="true" signature="stopDriver()[pri:0, instance:slotsGame.SlotsPP@55b7a4e0]" started-at="2022-09-12T23:24:02 SGT" name="stopDriver" finished-at="2022-09-12T23:24:03 SGT" duration-ms="1318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopDriver -->

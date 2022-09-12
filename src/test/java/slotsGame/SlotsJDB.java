@@ -73,10 +73,10 @@ public class SlotsJDB extends VariablesStore {
 	}
 
 	@Test(priority = 4, groups = { "JDB" })
-	@Parameters({ "JDB1", "JDB2", "JDB3", "JDB4", "JDB5" })
-	public void selectSlotsGame(String JDB1, String JDB2, String JDB3, String JDB4, String JDB5) throws FailedLoginException, InterruptedException {
+	@Parameters({ "JDB1", "JDB2", "JDB3", "JDB4", "JDB5", "time" })
+	public void selectSlotsGame(String JDB1, String JDB2, String JDB3, String JDB4, String JDB5, int time) throws FailedLoginException, InterruptedException {
 		cR.createTest("selectSlotsGame");
-		sGCVAG.selectGameFromSlotsList(JDB1, JDB2, JDB3, JDB4, JDB5);
+		sGCVAG.selectGameFromSlotsList(JDB1, JDB2, JDB3, JDB4, JDB5, time);
 	}
 
 	@AfterMethod(groups = { "JDB" })

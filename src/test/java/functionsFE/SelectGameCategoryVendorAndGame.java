@@ -68,21 +68,7 @@ public class SelectGameCategoryVendorAndGame extends VariablesStore {
 		}
 	}
 
-	public void switchWindow() throws InterruptedException {
-		nextWindowHandle = bDriver.getDriver().getWindowHandles();
-		Thread.sleep(500);
-		Iterator<String> iterate = nextWindowHandle.iterator();
-		while (iterate.hasNext()) {
-			String winHandle = iterate.next();
-			bDriver.getDriver().switchTo().window(winHandle);
-			cR.getExtentTest().info("Switched to " + selectGameVendorText);
-		}
-		Thread.sleep(30000);
-		takeSS.getPassScreenShot(selectGameVendorText);
-		cR.getExtentTest().addScreenCaptureFromPath(takeSS.screenShotPathExtent() + selectGameVendorText + passSS, selectGameVendorText);
-	}
-
-	public void selectGameFromSlotsList(String gameName1, String gameName2, String gameName3, String gameName4, String gameName5) throws FailedLoginException, InterruptedException {
+	public void selectGameFromSlotsList(String gameName1, String gameName2, String gameName3, String gameName4, String gameName5, int time) throws FailedLoginException, InterruptedException {
 		fail = "selectGameFromSlotsList failed";
 		parentWindowHandle = bDriver.getDriver().getWindowHandle();
 
@@ -108,7 +94,7 @@ public class SelectGameCategoryVendorAndGame extends VariablesStore {
 					bDriver.getDriver().switchTo().window(winHandle);
 					bDriver.getDriver().manage().window().maximize();
 				}
-				Thread.sleep(1000);
+				Thread.sleep(time);
 				takeSS.getPassScreenShot(array);
 				cR.getExtentTest().addScreenCaptureFromPath(takeSS.screenShotPathExtent() + array + passSS, array);
 
@@ -119,7 +105,7 @@ public class SelectGameCategoryVendorAndGame extends VariablesStore {
 			}
 		}
 	}
-
+	
 	public void selectGameFromFishList(String gameName1, String gameName2, String gameName3) throws FailedLoginException, InterruptedException {
 		fail = "selectGameFromFishList failed";
 		parentWindowHandle = bDriver.getDriver().getWindowHandle();
@@ -153,5 +139,19 @@ public class SelectGameCategoryVendorAndGame extends VariablesStore {
 				cR.getExtentTest().fail(fail);
 			}
 		}
+	}
+	
+	public void switchWindow() throws InterruptedException {
+		nextWindowHandle = bDriver.getDriver().getWindowHandles();
+		Thread.sleep(500);
+		Iterator<String> iterate = nextWindowHandle.iterator();
+		while (iterate.hasNext()) {
+			String winHandle = iterate.next();
+			bDriver.getDriver().switchTo().window(winHandle);
+			cR.getExtentTest().info("Switched to " + selectGameVendorText);
+		}
+		Thread.sleep(30000);
+		takeSS.getPassScreenShot(selectGameVendorText);
+		cR.getExtentTest().addScreenCaptureFromPath(takeSS.screenShotPathExtent() + selectGameVendorText + passSS, selectGameVendorText);
 	}
 }
