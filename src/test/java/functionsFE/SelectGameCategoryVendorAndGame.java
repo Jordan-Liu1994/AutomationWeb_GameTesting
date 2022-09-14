@@ -67,6 +67,38 @@ public class SelectGameCategoryVendorAndGame extends VariablesStore {
 			cR.getExtentTest().fail(fail);
 		}
 	}
+	
+	public void selectGameVendorOnly(String gameVendorName, int time) throws FailedLoginException, InterruptedException {
+		fail = "selectGameVendor failed";
+		parentWindowHandle = bDriver.getDriver().getWindowHandle();
+
+		wait = new WebDriverWait(bDriver.getDriver(), 15);
+		WebElement selectGameVendor = bDriver.getDriver().findElement(By.xpath("//div[contains(text(),'" + gameVendorName + "')]"));
+		wait.until(ExpectedConditions.elementToBeClickable(selectGameVendor));
+		selectGameVendorText = selectGameVendor.getText();
+
+		if (selectGameVendor.isDisplayed()) {
+			selectGameVendor.click();
+			cR.getExtentTest().info("Clicked " + selectGameVendorText);
+			
+			nextWindowHandle = bDriver.getDriver().getWindowHandles();
+			Thread.sleep(500);
+			Iterator<String> iterate = nextWindowHandle.iterator();
+			while (iterate.hasNext()) {
+				String winHandle = iterate.next();
+				bDriver.getDriver().switchTo().window(winHandle);
+				bDriver.getDriver().manage().window().maximize();
+			}
+			Thread.sleep(time);
+			takeSS.getPassScreenShot(selectGameVendorText);
+			cR.getExtentTest().addScreenCaptureFromPath(takeSS.screenShotPathExtent() + selectGameVendorText + passSS, selectGameVendorText);
+
+			bDriver.closeBrowser();
+			bDriver.getDriver().switchTo().window(parentWindowHandle);
+		} else {
+			cR.getExtentTest().fail(fail);
+		}
+	}
 
 	public void selectGameFromSlotsList(String gameName1, String gameName2, String gameName3, String gameName4, String gameName5, int time) throws FailedLoginException, InterruptedException {
 		fail = "selectGameFromSlotsList failed";
@@ -128,6 +160,7 @@ public class SelectGameCategoryVendorAndGame extends VariablesStore {
 				while (iterate.hasNext()) {
 					String winHandle = iterate.next();
 					bDriver.getDriver().switchTo().window(winHandle);
+					bDriver.getDriver().manage().window().maximize();
 				}
 				Thread.sleep(time);
 				takeSS.getPassScreenShot(array);

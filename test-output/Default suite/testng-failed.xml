@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="openSportsGame.OpenSportsGame1">
+      <class name="pokerGame.PokerKY">
         <methods>
-          <include name="stopDriver"/>
-          <include name="selectSportsVendor"/>
           <include name="logCaseStatus"/>
           <include name="startReportAndSetProperty"/>
+          <include name="selectPokerVendor"/>
+          <include name="stopDriver"/>
+          <include name="announcement"/>
           <include name="goToSite"/>
           <include name="login"/>
-          <include name="announcement"/>
         </methods>
-      </class> <!-- openSportsGame.OpenSportsGame1 -->
+      </class> <!-- pokerGame.PokerKY -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

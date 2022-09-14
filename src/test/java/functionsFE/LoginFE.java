@@ -6,6 +6,7 @@ import javax.security.auth.login.FailedLoginException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -82,6 +83,23 @@ public class LoginFE extends VariablesStore {
 				setCaptcha.clear();
 				setCaptcha.sendKeys(captcha);
 				cR.getExtentTest().info(captcha + keyIn + setCaptcha_Text);
+			}
+		} catch (NoSuchElementException e) {
+			cR.getExtentTest().skip(skip);
+		}
+	}
+	
+	public void setSliderCaptcha() throws FailedLoginException {
+		fail = "setSliderCaptcha failed";
+		skip = "setSliderCaptcha skipped";
+		
+		try {
+			Actions builder = new Actions(bDriver.getDriver());
+			WebElement setSliderCaptcha = bDriver.getDriver().findElement(By.xpath("//div[@class='gt_slider_knob gt_show']"));
+
+			if (setSliderCaptcha.isDisplayed()) {
+				builder.moveToElement(setSliderCaptcha).clickAndHold().moveByOffset(100, 0).release().build().perform();
+				cR.getExtentTest().info("Dragged captcha slider to the right by 100 pixels");
 			}
 		} catch (NoSuchElementException e) {
 			cR.getExtentTest().skip(skip);

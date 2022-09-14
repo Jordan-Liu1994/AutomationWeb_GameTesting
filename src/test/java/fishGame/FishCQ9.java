@@ -50,6 +50,7 @@ public class FishCQ9 extends VariablesStore {
 		cR.createTest("announcement");
 		aF.closeAnnouncement();
 		aF.closeAnnouncementOverview();
+		aF.closeAnnouncementOverviewOldFramework();
 	}
 
 	@Test(priority = 2, groups = { "login", "CQ9" })
@@ -75,7 +76,7 @@ public class FishCQ9 extends VariablesStore {
 	@Test(priority = 4, groups = { "CQ9" })
 	@Parameters({ "CQ91", "CQ92", "CQ93", "time" })
 	public void selectFishGame(String CQ91, String CQ92, String CQ93, int time) throws FailedLoginException, InterruptedException {
-		cR.createTest("selectSlotsGame");
+		cR.createTest("selectFishGame");
 		sGCVAG.selectGameFromFishList(CQ91, CQ92, CQ93, time);
 	}
 
